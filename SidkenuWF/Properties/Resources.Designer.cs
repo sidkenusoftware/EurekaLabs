@@ -248,5 +248,15 @@ namespace SidkenuWF.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        public static System.Drawing.Bitmap Logo_FondoBlanco {
+            get {
+                object obj = ResourceManager.GetObject("Logo_FondoBlanco", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

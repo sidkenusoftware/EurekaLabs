@@ -33,6 +33,8 @@
             lblMensaje = new Label();
             label1 = new Label();
             label2 = new Label();
+            imgLogo = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)imgLogo).BeginInit();
             SuspendLayout();
             // 
             // bgWorker
@@ -68,11 +70,11 @@
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Segoe UI", 48F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = Color.WhiteSmoke;
-            label1.Location = new Point(115, 90);
+            label1.Location = new Point(117, 86);
             label1.Name = "label1";
-            label1.Size = new Size(262, 86);
+            label1.Size = new Size(371, 86);
             label1.TabIndex = 2;
-            label1.Text = "Sidkenu";
+            label1.Text = "Eureka Labs";
             label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label2
@@ -82,12 +84,24 @@
             label2.BackColor = Color.Transparent;
             label2.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
             label2.ForeColor = Color.WhiteSmoke;
-            label2.Location = new Point(311, 161);
+            label2.Location = new Point(419, 172);
             label2.Name = "label2";
             label2.Size = new Size(45, 32);
             label2.TabIndex = 3;
             label2.Text = "1.0";
             label2.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // imgLogo
+            // 
+            imgLogo.BackColor = Color.Transparent;
+            imgLogo.Image = Properties.Resources.Logo_FondoBlanco;
+            imgLogo.Location = new Point(12, 86);
+            imgLogo.Name = "imgLogo";
+            imgLogo.Size = new Size(100, 100);
+            imgLogo.SizeMode = PictureBoxSizeMode.StretchImage;
+            imgLogo.TabIndex = 4;
+            imgLogo.TabStop = false;
+            imgLogo.Click += pictureBox1_Click;
             // 
             // Splash
             // 
@@ -98,6 +112,7 @@
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(500, 300);
             ControlBox = false;
+            Controls.Add(imgLogo);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(lblMensaje);
@@ -109,6 +124,7 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Splash";
             Load += _99905_Splash_Load;
+            ((System.ComponentModel.ISupportInitialize)imgLogo).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -120,5 +136,6 @@
         private Label lblMensaje;
         private Label label1;
         private Label label2;
+        private PictureBox imgLogo;
     }
 }

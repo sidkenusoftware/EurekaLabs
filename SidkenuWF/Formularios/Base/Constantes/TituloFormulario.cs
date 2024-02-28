@@ -2,6 +2,6 @@
 {
     public static class FormularioConstantes
     {
-        public static string Titulo => "Tsidkenu 2.0";
+        public static string Titulo => "Eureka Labs 1.0";
     }
 }
