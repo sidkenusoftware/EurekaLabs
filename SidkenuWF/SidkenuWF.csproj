@@ -1,0 +1,97 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AForge.Video.DirectShow" Version="2.2.5" />
+    <PackageReference Include="Autofac" Version="7.0.1" />
+    <PackageReference Include="AutofacSerilogIntegration" Version="5.0.0" />
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
+    <PackageReference Include="AutoMapper.Contrib.Autofac.DependencyInjection" Version="7.1.0" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
+    <PackageReference Include="FontAwesome.Sharp" Version="6.3.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.15">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.15">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Serilog" Version="3.0.1" />
+    <PackageReference Include="Serilog.Settings.Configuration" Version="7.0.0" />
+    <PackageReference Include="Serilog.Sinks.MSSqlServer" Version="6.3.0" />
+    <PackageReference Include="Serilog.Sinks.MySQL" Version="5.0.0" />
+    <PackageReference Include="SqlTableDependency" Version="8.5.8" />
+    <PackageReference Include="StructureMap" Version="4.7.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Sidkenu.AccesoDatos\Sidkenu.AccesoDatos.csproj" />
+    <ProjectReference Include="..\Sidkenu.LogicaNegocio\Sidkenu.LogicaNegocio.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Formularios\Base\FormularioComunSinBorde.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Formularios\Base\FormularioComun.cs" />
+    <Compile Update="Formularios\Base\FormularioLookUpConDetalle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Formularios\Base\FormularioLookUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Formularios\Core\Controles\CtrolVarianteConStockPrecio.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Formularios\Core\Controles\CtrolVarianteTituloConStockPrecio.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Formularios\Core\LookUps\VentaArticuloLookUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Formularios\Core\LookUps\VerFormulaLookUp.cs" />
+    <Compile Update="Formularios\Core\LookUps\VerKitLookUp.cs" />
+    <Compile Update="Formularios\Core\Varios\CambiarCantidadPuntoVenta.cs" />
+    <Compile Update="Formularios\Core\Varios\CargarPerdidaPorFabricacion.cs" />
+    <Compile Update="Formularios\Core\Varios\CambiarCantidadFormula.cs" />
+    <Compile Update="Formularios\Core\Varios\MedioPagoTransferencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Formularios\Core\_00120_TransferenciaCajas.cs" />
+    <Compile Update="Formularios\Core\_00141_ConfeccionarFormula.cs" />
+    <Compile Update="Formularios\Core\_00148_FormaPago.cs" />
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+</Project>
