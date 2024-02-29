@@ -25,7 +25,6 @@ namespace Sidkenu.LogicaNegocio.Servicios.Implementacion.Core
 
         public ResultDTO Add(DepositoPersistenciaDTO entidad, string user)
         {
-            using var transaction = new TransactionScope();
             using var _context = new DataContext();            
 
             try
@@ -79,8 +78,6 @@ namespace Sidkenu.LogicaNegocio.Servicios.Implementacion.Core
 
                 _context.SaveChanges();
 
-                transaction.Complete();
-
                 return new ResultDTO
                 {
                     State = true,
@@ -90,8 +87,6 @@ namespace Sidkenu.LogicaNegocio.Servicios.Implementacion.Core
             }
             catch (Exception ex)
             {
-                transaction.Dispose();
-
                 return new ResultDTO
                 {
                     Message = ex.Message,
@@ -356,7 +351,6 @@ namespace Sidkenu.LogicaNegocio.Servicios.Implementacion.Core
 
         public ResultDTO MarcarComoPredeterminado(Guid depositoId, Guid empresaId, TipoDeposito tipoDeposito)
         {
-            using var transaction = new TransactionScope();
             using var _context = new DataContext();            
 
             try
@@ -388,8 +382,6 @@ namespace Sidkenu.LogicaNegocio.Servicios.Implementacion.Core
 
                 _context.SaveChanges();
 
-                transaction.Complete();
-
                 return new ResultDTO
                 {
                     State = true,
@@ -398,8 +390,6 @@ namespace Sidkenu.LogicaNegocio.Servicios.Implementacion.Core
             }
             catch (Exception ex)
             {
-                transaction.Dispose();
-
                 return new ResultDTO
                 {
                     Message = ex.Message,

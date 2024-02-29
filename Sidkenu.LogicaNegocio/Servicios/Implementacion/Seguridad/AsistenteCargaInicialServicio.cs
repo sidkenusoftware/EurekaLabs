@@ -63,8 +63,6 @@ namespace Sidkenu.LogicaNegocio.Servicios.Implementacion.Seguridad
 
         public ResultDTO Add(AsistenteDTO entidad)
         {
-            // using var transaccion = new DataContext().Database.BeginTransaction();
-
             try
             {
                 var entidadEmpresaDTO = _mapper.Map<EmpresaPersistenciaDTO>(entidad.Empresa);

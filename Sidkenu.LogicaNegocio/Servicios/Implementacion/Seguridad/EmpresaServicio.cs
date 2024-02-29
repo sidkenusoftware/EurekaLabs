@@ -22,7 +22,6 @@ namespace Sidkenu.LogicaNegocio.Servicios.Implementacion.Seguridad
 
         public ResultDTO Add(EmpresaPersistenciaDTO entidad, string user)
         {
-            using var transaccion = new TransactionScope();
             using var _context = new DataContext();
 
             try
@@ -100,11 +99,9 @@ namespace Sidkenu.LogicaNegocio.Servicios.Implementacion.Seguridad
 
                         _context.GruposPersonas.Add(grupoPersona);
                     }
-
-                    _context.SaveChanges();
                 }
 
-                transaccion.Complete();
+                _context.SaveChanges();
 
                 return new ResultDTO
                 {
@@ -115,8 +112,6 @@ namespace Sidkenu.LogicaNegocio.Servicios.Implementacion.Seguridad
             }            
             catch (Exception ex)
             {
-                transaccion.Dispose();
-
                 return new ResultDTO
                 {
                     Message = ex.Message,

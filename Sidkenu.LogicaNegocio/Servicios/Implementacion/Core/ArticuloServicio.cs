@@ -196,7 +196,6 @@ namespace Sidkenu.LogicaNegocio.Servicios.Implementacion.Core
 
         public ResultDTO Update(ArticuloPersistenciaDTO entidad, string user)
         {
-            using var transaction = new TransactionScope();
             using var _context = new DataContext();
 
             try
@@ -268,8 +267,6 @@ namespace Sidkenu.LogicaNegocio.Servicios.Implementacion.Core
 
                 _context.SaveChanges();
 
-                transaction.Complete();
-
                 return new ResultDTO
                 {
                     State = true,
@@ -278,8 +275,6 @@ namespace Sidkenu.LogicaNegocio.Servicios.Implementacion.Core
             }
             catch (Exception ex)
             {
-                transaction.Dispose();
-
                 return new ResultDTO
                 {
                     Message = ex.Message,

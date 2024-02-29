@@ -204,7 +204,6 @@ namespace Sidkenu.LogicaNegocio.Servicios.Implementacion.Core
 
         public ResultDTO CambiarEstadoEnProceso(Guid ordenFabricacionId, string user)
         {
-            using var transaction = new TransactionScope();
             using var _context = new DataContext();            
 
             try
@@ -237,14 +236,10 @@ namespace Sidkenu.LogicaNegocio.Servicios.Implementacion.Core
 
                 _context.SaveChanges();
 
-                transaction.Complete();
-
                 return new ResultDTO { State = true };
             }
             catch (Exception ex)
             {
-                transaction.Dispose();
-
                 return new ResultDTO
                 {
                     Message = ex.Message,
@@ -255,7 +250,6 @@ namespace Sidkenu.LogicaNegocio.Servicios.Implementacion.Core
 
         public ResultDTO CancelarOrdenFabricacion(Guid OrdenFabricacionId, string user)
         {
-            using var transaction = new TransactionScope();
             using var _context = new DataContext();                       
 
             try
@@ -287,14 +281,10 @@ namespace Sidkenu.LogicaNegocio.Servicios.Implementacion.Core
 
                 _context.SaveChanges();
 
-                transaction.Complete();
-
                 return new ResultDTO { State = true , Message = "La Orden de Fabricación se canceló" };
             }
             catch (Exception ex)
             {
-                transaction.Dispose();
-
                 return new ResultDTO
                 {
                     Message = ex.Message,
@@ -305,7 +295,6 @@ namespace Sidkenu.LogicaNegocio.Servicios.Implementacion.Core
 
         public ResultDTO FinalizarOrdenFabricacion(Guid ordenFabricacionId, string user)
         {
-            using var transaction = new TransactionScope();
             using var _context = new DataContext();
             
             try
@@ -371,14 +360,10 @@ namespace Sidkenu.LogicaNegocio.Servicios.Implementacion.Core
 
                 _context.SaveChanges();
 
-                transaction.Complete();
-
                 return new ResultDTO { State = true, Message = "La Orden de Fabricación se canceló" };
             }
             catch (Exception ex)
             {
-                transaction.Dispose();
-
                 return new ResultDTO
                 {
                     Message = ex.Message,

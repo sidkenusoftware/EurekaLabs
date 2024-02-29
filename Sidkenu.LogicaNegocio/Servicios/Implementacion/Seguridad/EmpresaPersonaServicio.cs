@@ -70,9 +70,7 @@ namespace Sidkenu.LogicaNegocio.Servicios.Implementacion.Seguridad
 
         public ResultDTO AddPersonasEmpresa(EmpresaPersonasPersistenciaDTO empresaPersonasPersistenciaDTO, string userLogin)
         {
-            using var transaccion = new TransactionScope();
             using var _context = new DataContext();
-                       
 
             try
             {
@@ -104,8 +102,6 @@ namespace Sidkenu.LogicaNegocio.Servicios.Implementacion.Seguridad
 
                 _context.SaveChanges();
 
-                transaccion.Complete();
-
                 return new ResultDTO
                 {
                     State = true,
@@ -114,8 +110,6 @@ namespace Sidkenu.LogicaNegocio.Servicios.Implementacion.Seguridad
             }
             catch (Exception ex)
             {
-                transaccion.Dispose();
-
                 return new ResultDTO
                 {
                     Message = ex.Message,
@@ -241,7 +235,6 @@ namespace Sidkenu.LogicaNegocio.Servicios.Implementacion.Seguridad
 
         public ResultDTO DeletePersonasEmpresa(EmpresaPersonasPersistenciaDTO empresaPersonasPersistenciaDTO, string userLogin)
         {
-            using var transaccion = new TransactionScope();
             using var _context = new DataContext();
 
             try
@@ -270,8 +263,6 @@ namespace Sidkenu.LogicaNegocio.Servicios.Implementacion.Seguridad
 
                 _context.SaveChanges();
 
-                transaccion.Complete();
-
                 return new ResultDTO
                 {
                     State = true,
@@ -280,8 +271,6 @@ namespace Sidkenu.LogicaNegocio.Servicios.Implementacion.Seguridad
             }
             catch (Exception ex)
             {
-                transaccion.Dispose();
-
                 return new ResultDTO
                 {
                     Message = ex.Message,

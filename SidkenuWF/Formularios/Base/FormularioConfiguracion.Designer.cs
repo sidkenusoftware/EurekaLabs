@@ -110,7 +110,7 @@
             // lblTitulo
             // 
             lblTitulo.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            lblTitulo.Font = new Font("Arial Narrow", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
+            lblTitulo.Font = new Font("Microsoft Sans Serif", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
             lblTitulo.ForeColor = Color.WhiteSmoke;
             lblTitulo.Location = new Point(55, 9);
             lblTitulo.Name = "lblTitulo";
@@ -139,17 +139,18 @@
             btnSalir.UseVisualStyleBackColor = false;
             btnSalir.Click += BtnSalir_Click;
             // 
-            // FormularioSetting
+            // FormularioConfiguracion
             // 
+            AcceptButton = btnEjecutar;
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            CancelButton = btnSalir;
             ClientSize = new Size(761, 450);
             Controls.Add(pnlTitulo);
             Controls.Add(pnlBotonera);
             MaximizeBox = false;
             MinimizeBox = false;
-            Name = "FormularioSetting";
-            StartPosition = FormStartPosition.CenterParent;
+            Name = "FormularioConfiguracion";
             Text = "Sidkenu";
             pnlBotonera.ResumeLayout(false);
             pnlTitulo.ResumeLayout(false);
