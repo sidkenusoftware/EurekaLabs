@@ -43,6 +43,7 @@ namespace SidkenuWF.Formularios.Core.Model
         public decimal Descuento { get; set; }
         public decimal Impuesto { get; set; }                        
         public decimal SubTotal => (PrecioPublico * Cantidad) - Porcentaje.Calcular((PrecioPublico * Cantidad), Descuento);
+
         public TipoItemFactura TipoItem { get; set; }
 
         public byte[] Foto { get; set; }

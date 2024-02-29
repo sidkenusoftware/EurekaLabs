@@ -30,7 +30,6 @@ namespace Sidkenu.LogicaNegocio.Servicios.Implementacion.Core
         public ResultDTO Add(ArticuloPersistenciaDTO entidad, string user)
         {
             using var _context = new DataContext();
-            //using var transaction = _context.Database.BeginTransaction();
 
             try
             {
@@ -119,6 +118,8 @@ namespace Sidkenu.LogicaNegocio.Servicios.Implementacion.Core
                     _context.ArticuloDepositos.Add(_articuloDepositoNuevo);
                 });
 
+                _context.SaveChanges();
+
                 // ======================================================================================================== //
                 // ==================                           CALCULO  PRECIO                         =================== //
                 // ======================================================================================================== //
@@ -136,8 +137,6 @@ namespace Sidkenu.LogicaNegocio.Servicios.Implementacion.Core
                 };
 
                 _articuloPrecioServicio.AddOrUpdate(articuloPrecio,user);
-
-                _context.SaveChanges();
 
                 return new ResultDTO
                 {

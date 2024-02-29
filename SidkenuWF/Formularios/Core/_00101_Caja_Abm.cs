@@ -65,6 +65,7 @@ namespace SidkenuWF.Formularios.Core
             }
         }
 
+
         public override ResultDTO EjecutarComandoInsert()
         {
             try
@@ -84,6 +85,20 @@ namespace SidkenuWF.Formularios.Core
 
                 if (result.State)
                 {
+                    chkPermiteGastos.Checked = false;
+                    chkPagoProveedor.Checked = false;
+
+                    chkEfectivo.Checked = false;
+                    chkCheque.Checked = false;
+                    chkTarjeta.Checked = false;
+                    chkTransferencia.Checked = false;
+                    chkCtaCte.Checked = false;
+
+                    txtAbreviatura.Clear();
+                    txtDescripcion.Clear();
+
+                    txtAbreviatura.Focus();
+
                     if (base._configuracionDTO != null && base._configuracionDTO != null && base._configuracionDTO.LogInformacion)
                     {
                         _logger.Information($"Se INSERTO Datos: {AsignarDatos().GetPropValue()}. User: {Properties.Settings.Default.PersonaLogin}");
@@ -106,6 +121,9 @@ namespace SidkenuWF.Formularios.Core
                 };
             }
         }
+
+
+        
 
         private CajaPersistenciaDTO AsignarDatos()
         {

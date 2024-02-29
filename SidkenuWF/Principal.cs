@@ -44,6 +44,8 @@ namespace SidkenuWF
         {
             InitializeComponent();
 
+            this.Text = FormularioConstantes.Titulo;
+
             CargarApariencia();
 
             this._seguridadServicio = seguridadServicio;
@@ -364,7 +366,7 @@ namespace SidkenuWF
 
         private void CargarApariencia()
         {
-            this.pnlSuperior.BackColor = Formularios.Base.Constantes.ColorFormulario.ColorPanelPrincipal;
+            this.pnlSuperior.BackColor = Formularios.Base.Constantes.ColorFormulario.ColorPanelPrincipal;            
         }
 
         private void BtnUserLogin_Click(object sender, EventArgs e)

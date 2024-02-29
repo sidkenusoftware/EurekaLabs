@@ -1,6 +1,7 @@
 ﻿using Serilog;
 using Sidkenu.LogicaNegocio.Servicios.Interface.Seguridad;
 using SidkenuWF.Formularios.Base;
+// using System.Windows.Forms.DataVisualization;
 
 namespace SidkenuWF.Formularios.Core
 {
@@ -17,6 +18,16 @@ namespace SidkenuWF.Formularios.Core
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void RefreshVentas()
+        {
+            this.chart1.Series[0].Points.Clear();
+            this.chart1.Series[0].LegendText = "Hola";
+
+            this.chart1.ChartAreas[0].AxisX.Interval = 1;
+
+
         }
     }
 }

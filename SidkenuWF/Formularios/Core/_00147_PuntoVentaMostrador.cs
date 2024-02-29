@@ -66,6 +66,7 @@ namespace SidkenuWF.Formularios.Core
             _clienteEsConsumidorFinal = true;
         }
 
+
         public _00147_PuntoVentaMostrador(ISeguridadServicio seguridadServicio,
                                           IConfiguracionServicio configuracionServicio,
                                           ILogger logger,
@@ -96,6 +97,7 @@ namespace SidkenuWF.Formularios.Core
 
             _agregarItemModoManual = false;
         }
+
 
         private void CargarDatos()
         {

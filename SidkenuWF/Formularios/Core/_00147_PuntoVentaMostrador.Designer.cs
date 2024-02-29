@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             pnlBotonera = new Panel();
             btnVerDetalle = new FontAwesome.Sharp.IconButton();
             btnElimnarItem = new FontAwesome.Sharp.IconButton();
@@ -645,7 +645,7 @@
             btnActivarBalanza.IconColor = Color.WhiteSmoke;
             btnActivarBalanza.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnActivarBalanza.IconSize = 22;
-            btnActivarBalanza.Location = new Point(153, 40);
+            btnActivarBalanza.Location = new Point(9, 39);
             btnActivarBalanza.Name = "btnActivarBalanza";
             btnActivarBalanza.Size = new Size(140, 28);
             btnActivarBalanza.TabIndex = 9;
@@ -665,11 +665,11 @@
             btnCargarArticuloFabricacion.IconColor = Color.WhiteSmoke;
             btnCargarArticuloFabricacion.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnCargarArticuloFabricacion.IconSize = 22;
-            btnCargarArticuloFabricacion.Location = new Point(9, 40);
+            btnCargarArticuloFabricacion.Location = new Point(153, 39);
             btnCargarArticuloFabricacion.Name = "btnCargarArticuloFabricacion";
             btnCargarArticuloFabricacion.Size = new Size(140, 28);
             btnCargarArticuloFabricacion.TabIndex = 8;
-            btnCargarArticuloFabricacion.Text = "(F7) Art. Fabr.";
+            btnCargarArticuloFabricacion.Text = "(F7) Art. Fab.";
             btnCargarArticuloFabricacion.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnCargarArticuloFabricacion.UseVisualStyleBackColor = false;
             btnCargarArticuloFabricacion.Click += BtnCargarArticuloFabricacion_Click;
@@ -803,14 +803,14 @@
             dgvGrilla.AllowUserToDeleteRows = false;
             dgvGrilla.BackgroundColor = Color.White;
             dgvGrilla.BorderStyle = BorderStyle.None;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = SystemColors.Control;
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dgvGrilla.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = SystemColors.Control;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dgvGrilla.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dgvGrilla.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvGrilla.ContextMenuStrip = MenuGrilla;
             dgvGrilla.Dock = DockStyle.Fill;

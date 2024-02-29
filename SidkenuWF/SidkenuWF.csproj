@@ -30,6 +30,7 @@
     <PackageReference Include="Serilog.Sinks.MySQL" Version="5.0.0" />
     <PackageReference Include="SqlTableDependency" Version="8.5.8" />
     <PackageReference Include="StructureMap" Version="4.7.1" />
+    <PackageReference Include="WinForms.DataVisualization" Version="1.9.2" />
   </ItemGroup>
 
   <ItemGroup>
