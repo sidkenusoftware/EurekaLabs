@@ -13,21 +13,26 @@ namespace SidkenuWF.Formularios.Core
                                       : base(seguridadServicio, configuracionServicio, logger)
         {
             InitializeComponent();
+
+            ctrolDashCaja.Titulo = "Recaudacion";
+            ctrolDashCaja.ColorTitulo = Color.Yellow;
+            ctrolDashCaja.Valor = "$ 1500,00";
+            ctrolDashCaja.Icono = FontAwesome.Sharp.IconChar.SackDollar;
+
+            ctrolDashCantClientes.Titulo = "Cant. Clientes";
+            ctrolDashCantClientes.ColorTitulo = Color.Orange;
+            ctrolDashCantClientes.Valor = "$ 150";
+            ctrolDashCantClientes.Icono = FontAwesome.Sharp.IconChar.Users;
+
+            ctrolDashTotalVentas.Titulo = "Total Ventas";
+            ctrolDashTotalVentas.ColorTitulo = Color.Beige;
+            ctrolDashTotalVentas.Valor = "$ 150000000,00";
+            ctrolDashTotalVentas.Icono = FontAwesome.Sharp.IconChar.SackDollar;
         }
 
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Close();
-        }
-
-        private void RefreshVentas()
-        {
-            this.chart1.Series[0].Points.Clear();
-            this.chart1.Series[0].LegendText = "Hola";
-
-            this.chart1.ChartAreas[0].AxisX.Interval = 1;
-
-
         }
     }
 }

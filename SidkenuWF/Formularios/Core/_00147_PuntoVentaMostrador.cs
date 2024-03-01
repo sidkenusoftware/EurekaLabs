@@ -265,6 +265,15 @@ namespace SidkenuWF.Formularios.Core
 
             dgvGrilla.Columns["Id"].Visible = false;
             dgvGrilla.Columns["Id"].DisplayIndex = 11;
+
+            dgvGrilla.Columns["Foto"].Visible = false;
+            dgvGrilla.Columns["Foto"].DisplayIndex = 12;
+            
+            dgvGrilla.Columns["FechaEntrega"].Visible = false;
+            dgvGrilla.Columns["FechaEntrega"].DisplayIndex = 13;
+            
+            dgvGrilla.Columns["CodigoFabricacion"].Visible = false;
+            dgvGrilla.Columns["CodigoFabricacion"].DisplayIndex = 14;
         }
 
         private void CalcularTotalizadores()

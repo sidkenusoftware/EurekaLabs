@@ -264,9 +264,9 @@
             // panel1
             // 
             panel1.BackColor = Color.Gray;
-            panel1.Location = new Point(471, 12);
+            panel1.Location = new Point(464, 12);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1, 431);
+            panel1.Size = new Size(1, 329);
             panel1.TabIndex = 119;
             // 
             // label15
@@ -299,7 +299,7 @@
             // 
             label14.AutoSize = true;
             label14.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label14.Location = new Point(70, 423);
+            label14.Location = new Point(71, 334);
             label14.Name = "label14";
             label14.Size = new Size(288, 16);
             label14.TabIndex = 116;
@@ -309,7 +309,7 @@
             // 
             chkUnificarRenglonesIngresarMismoArticulo.AutoSize = true;
             chkUnificarRenglonesIngresarMismoArticulo.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            chkUnificarRenglonesIngresarMismoArticulo.Location = new Point(19, 419);
+            chkUnificarRenglonesIngresarMismoArticulo.Location = new Point(20, 330);
             chkUnificarRenglonesIngresarMismoArticulo.MinimumSize = new Size(45, 22);
             chkUnificarRenglonesIngresarMismoArticulo.Name = "chkUnificarRenglonesIngresarMismoArticulo";
             chkUnificarRenglonesIngresarMismoArticulo.OffBackColor = Color.Gray;
@@ -330,7 +330,7 @@
             btnBuscarEmpleado.IconColor = Color.FromArgb(64, 64, 64);
             btnBuscarEmpleado.IconFont = FontAwesome.Sharp.IconFont.Auto;
             btnBuscarEmpleado.IconSize = 15;
-            btnBuscarEmpleado.Location = new Point(381, 358);
+            btnBuscarEmpleado.Location = new Point(713, 364);
             btnBuscarEmpleado.Name = "btnBuscarEmpleado";
             btnBuscarEmpleado.Size = new Size(27, 23);
             btnBuscarEmpleado.TabIndex = 114;
@@ -342,7 +342,7 @@
             // 
             txtEmpleadoQueAutoriza.BorderStyle = BorderStyle.FixedSingle;
             txtEmpleadoQueAutoriza.Enabled = false;
-            txtEmpleadoQueAutoriza.Location = new Point(71, 358);
+            txtEmpleadoQueAutoriza.Location = new Point(403, 364);
             txtEmpleadoQueAutoriza.Name = "txtEmpleadoQueAutoriza";
             txtEmpleadoQueAutoriza.Size = new Size(307, 23);
             txtEmpleadoQueAutoriza.TabIndex = 112;
@@ -350,7 +350,9 @@
             // 
             // nudDescuento
             // 
-            nudDescuento.Location = new Point(378, 391);
+            nudDescuento.DecimalPlaces = 2;
+            nudDescuento.Location = new Point(381, 299);
+            nudDescuento.Maximum = new decimal(new int[] { 10000000, 0, 0, 0 });
             nudDescuento.Name = "nudDescuento";
             nudDescuento.Size = new Size(68, 23);
             nudDescuento.TabIndex = 111;
@@ -359,7 +361,7 @@
             // 
             label13.AutoSize = true;
             label13.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label13.Location = new Point(70, 394);
+            label13.Location = new Point(71, 302);
             label13.Name = "label13";
             label13.Size = new Size(302, 16);
             label13.TabIndex = 110;
@@ -369,7 +371,7 @@
             // 
             chkPedirAutorizacionPorDescuento.AutoSize = true;
             chkPedirAutorizacionPorDescuento.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            chkPedirAutorizacionPorDescuento.Location = new Point(19, 390);
+            chkPedirAutorizacionPorDescuento.Location = new Point(20, 299);
             chkPedirAutorizacionPorDescuento.MinimumSize = new Size(45, 22);
             chkPedirAutorizacionPorDescuento.Name = "chkPedirAutorizacionPorDescuento";
             chkPedirAutorizacionPorDescuento.OffBackColor = Color.Gray;
@@ -384,7 +386,7 @@
             // 
             label12.AutoSize = true;
             label12.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label12.Location = new Point(71, 330);
+            label12.Location = new Point(71, 367);
             label12.Name = "label12";
             label12.Size = new Size(326, 16);
             label12.TabIndex = 108;
@@ -394,7 +396,7 @@
             // 
             chkPedirAutorizacion.AutoSize = true;
             chkPedirAutorizacion.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            chkPedirAutorizacion.Location = new Point(20, 326);
+            chkPedirAutorizacion.Location = new Point(20, 364);
             chkPedirAutorizacion.MinimumSize = new Size(45, 22);
             chkPedirAutorizacion.Name = "chkPedirAutorizacion";
             chkPedirAutorizacion.OffBackColor = Color.Gray;
@@ -454,7 +456,7 @@
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label8.Location = new Point(71, 303);
+            label8.Location = new Point(541, 240);
             label8.Name = "label8";
             label8.Size = new Size(193, 16);
             label8.TabIndex = 15;
@@ -464,7 +466,7 @@
             // 
             chkActivarLoteConVencimiento.AutoSize = true;
             chkActivarLoteConVencimiento.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            chkActivarLoteConVencimiento.Location = new Point(20, 299);
+            chkActivarLoteConVencimiento.Location = new Point(490, 236);
             chkActivarLoteConVencimiento.MinimumSize = new Size(45, 22);
             chkActivarLoteConVencimiento.Name = "chkActivarLoteConVencimiento";
             chkActivarLoteConVencimiento.OffBackColor = Color.Gray;
@@ -733,7 +735,6 @@
             BackColor = Color.White;
             ClientSize = new Size(784, 605);
             Controls.Add(tabControl1);
-            MinimumSize = new Size(800, 644);
             Name = "_00119_ConfiguracionCore";
             Text = "Configuracion";
             Load += _00119_ConfiguracionCore_Load;

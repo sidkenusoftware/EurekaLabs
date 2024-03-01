@@ -652,7 +652,7 @@ namespace Sidkenu.LogicaNegocio.Servicios.Implementacion.Core
                 }
 
                 var entities = _context.Articulos
-                    .AsNoTracking()
+                    // .AsNoTracking()
                     .Include(x => x.CondicionIva)
                     .Include(x => x.Marca)
                     .Include(x => x.Familia)

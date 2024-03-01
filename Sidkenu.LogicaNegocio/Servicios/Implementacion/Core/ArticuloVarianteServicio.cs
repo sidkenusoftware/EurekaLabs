@@ -133,6 +133,10 @@ namespace Sidkenu.LogicaNegocio.Servicios.Implementacion.Core
 
                     nuevoArticulo.PrecioCosto = _precioCostoArticulo;
 
+                    _context.Articulos.Add(nuevoArticulo);
+
+                    _context.SaveChanges();
+
                     _articuloPrecioServicio.AddOrUpdate(new DTOs.Core.ArticuloPrecio.ArticuloPrecioPersistenciaDTO
                     {
                         ArticuloId = variante.ArticuloId,
@@ -145,12 +149,8 @@ namespace Sidkenu.LogicaNegocio.Servicios.Implementacion.Core
                         EsFabricado = false
                     },
                     nuevoArticulo,
-                    user);
-
-                    _context.Articulos.Add(nuevoArticulo);                    
+                    user);                                       
                 }
-
-                _context.SaveChanges();
 
                 var mensaje = string.Empty;
 

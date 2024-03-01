@@ -537,7 +537,7 @@ namespace Sidkenu.LogicaNegocio.Servicios.Implementacion.Core
 
                     var _articuloListaPrecio = new ArticuloPrecio
                     {
-                        ArticuloId = articuloPrecioDTO.ArticuloId,
+                        ArticuloId = articuloNuevo.Id,
                         EstaEliminado = false,
                         FechaActualizacion = _fechaActualizacion,
                         ListaPrecioId = listaPrecio.Id,

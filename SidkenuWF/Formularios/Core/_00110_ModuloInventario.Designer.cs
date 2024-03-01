@@ -59,14 +59,14 @@
             depositoToolStripMenuItem = new ToolStripMenuItem();
             nuevoDepositoToolStripMenuItem = new ToolStripMenuItem();
             consultaToolStripMenuItem6 = new ToolStripMenuItem();
+            balanzaToolStripMenuItem = new ToolStripMenuItem();
+            parametrizacionBalanzaToolStripMenuItem = new ToolStripMenuItem();
             salirToolStripMenuItem = new ToolStripMenuItem();
             btnProducto = new FontAwesome.Sharp.IconButton();
             pnlContenedor = new Panel();
             btnProveedor = new FontAwesome.Sharp.IconButton();
-            iconButton1 = new FontAwesome.Sharp.IconButton();
+            btnProveedorConsulta = new FontAwesome.Sharp.IconButton();
             iconButton2 = new FontAwesome.Sharp.IconButton();
-            balanzaToolStripMenuItem = new ToolStripMenuItem();
-            parametrizacionBalanzaToolStripMenuItem = new ToolStripMenuItem();
             pnlMenuLateral.SuspendLayout();
             menuStrip1.SuspendLayout();
             SuspendLayout();
@@ -74,7 +74,7 @@
             // pnlMenuLateral
             // 
             pnlMenuLateral.Controls.Add(iconButton2);
-            pnlMenuLateral.Controls.Add(iconButton1);
+            pnlMenuLateral.Controls.Add(btnProveedorConsulta);
             pnlMenuLateral.Controls.Add(btnProveedor);
             pnlMenuLateral.Controls.Add(btnProducto);
             pnlMenuLateral.Location = new Point(0, 72);
@@ -82,7 +82,7 @@
             pnlMenuLateral.Controls.SetChildIndex(bordeCostadoBotoneraMenu, 0);
             pnlMenuLateral.Controls.SetChildIndex(btnProducto, 0);
             pnlMenuLateral.Controls.SetChildIndex(btnProveedor, 0);
-            pnlMenuLateral.Controls.SetChildIndex(iconButton1, 0);
+            pnlMenuLateral.Controls.SetChildIndex(btnProveedorConsulta, 0);
             pnlMenuLateral.Controls.SetChildIndex(iconButton2, 0);
             // 
             // menuStrip1
@@ -126,27 +126,27 @@
             // nuevoProductoToolStripMenuItem
             // 
             nuevoProductoToolStripMenuItem.Name = "nuevoProductoToolStripMenuItem";
-            nuevoProductoToolStripMenuItem.Size = new Size(180, 22);
+            nuevoProductoToolStripMenuItem.Size = new Size(171, 22);
             nuevoProductoToolStripMenuItem.Text = "Nuevo";
             nuevoProductoToolStripMenuItem.Click += NuevoProductoToolStripMenuItem_Click;
             // 
             // consultaToolStripMenuItem
             // 
             consultaToolStripMenuItem.Name = "consultaToolStripMenuItem";
-            consultaToolStripMenuItem.Size = new Size(180, 22);
+            consultaToolStripMenuItem.Size = new Size(171, 22);
             consultaToolStripMenuItem.Text = "Consulta";
             consultaToolStripMenuItem.Click += ConsultaProductoToolStripMenuItem_Click;
             // 
             // toolStripMenuItem1
             // 
             toolStripMenuItem1.Name = "toolStripMenuItem1";
-            toolStripMenuItem1.Size = new Size(177, 6);
+            toolStripMenuItem1.Size = new Size(168, 6);
             // 
             // familiaRubroToolStripMenuItem
             // 
             familiaRubroToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { nuevaFamiliaToolStripMenuItem, consultaToolStripMenuItem1 });
             familiaRubroToolStripMenuItem.Name = "familiaRubroToolStripMenuItem";
-            familiaRubroToolStripMenuItem.Size = new Size(180, 22);
+            familiaRubroToolStripMenuItem.Size = new Size(171, 22);
             familiaRubroToolStripMenuItem.Text = "Familia";
             // 
             // nuevaFamiliaToolStripMenuItem
@@ -167,7 +167,7 @@
             // 
             marcaToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { nuevaMarcaToolStripMenuItem, consultaToolStripMenuItem2 });
             marcaToolStripMenuItem.Name = "marcaToolStripMenuItem";
-            marcaToolStripMenuItem.Size = new Size(180, 22);
+            marcaToolStripMenuItem.Size = new Size(171, 22);
             marcaToolStripMenuItem.Text = "Marca";
             // 
             // nuevaMarcaToolStripMenuItem
@@ -188,7 +188,7 @@
             // 
             condicionDeIvaToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { nuevaCondicionDeIvaToolStripMenuItem, consultaToolStripMenuItem3 });
             condicionDeIvaToolStripMenuItem.Name = "condicionDeIvaToolStripMenuItem";
-            condicionDeIvaToolStripMenuItem.Size = new Size(180, 22);
+            condicionDeIvaToolStripMenuItem.Size = new Size(171, 22);
             condicionDeIvaToolStripMenuItem.Text = "Condición de Iva";
             // 
             // nuevaCondicionDeIvaToolStripMenuItem
@@ -209,7 +209,7 @@
             // 
             unidadDeMedidaToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { nuevaUnidadDeMedidaToolStripMenuItem, consulttaToolStripMenuItem });
             unidadDeMedidaToolStripMenuItem.Name = "unidadDeMedidaToolStripMenuItem";
-            unidadDeMedidaToolStripMenuItem.Size = new Size(180, 22);
+            unidadDeMedidaToolStripMenuItem.Size = new Size(171, 22);
             unidadDeMedidaToolStripMenuItem.Text = "Unidad de Medida";
             // 
             // nuevaUnidadDeMedidaToolStripMenuItem
@@ -229,13 +229,13 @@
             // toolStripMenuItem2
             // 
             toolStripMenuItem2.Name = "toolStripMenuItem2";
-            toolStripMenuItem2.Size = new Size(177, 6);
+            toolStripMenuItem2.Size = new Size(168, 6);
             // 
             // escalaVarianteToolStripMenuItem
             // 
             escalaVarianteToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { nuevaVarianteToolStripMenuItem, consultaToolStripMenuItem5 });
             escalaVarianteToolStripMenuItem.Name = "escalaVarianteToolStripMenuItem";
-            escalaVarianteToolStripMenuItem.Size = new Size(180, 22);
+            escalaVarianteToolStripMenuItem.Size = new Size(171, 22);
             escalaVarianteToolStripMenuItem.Text = "Variante";
             // 
             // nuevaVarianteToolStripMenuItem
@@ -255,13 +255,13 @@
             // toolStripMenuItem3
             // 
             toolStripMenuItem3.Name = "toolStripMenuItem3";
-            toolStripMenuItem3.Size = new Size(177, 6);
+            toolStripMenuItem3.Size = new Size(168, 6);
             // 
             // listaDePrecioToolStripMenuItem
             // 
             listaDePrecioToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { nuevaListaDePrecioToolStripMenuItem, consultaToolStripMenuItem7 });
             listaDePrecioToolStripMenuItem.Name = "listaDePrecioToolStripMenuItem";
-            listaDePrecioToolStripMenuItem.Size = new Size(180, 22);
+            listaDePrecioToolStripMenuItem.Size = new Size(171, 22);
             listaDePrecioToolStripMenuItem.Text = "Lista de Precio";
             // 
             // nuevaListaDePrecioToolStripMenuItem
@@ -298,6 +298,20 @@
             consultaToolStripMenuItem6.Size = new Size(121, 22);
             consultaToolStripMenuItem6.Text = "Consulta";
             consultaToolStripMenuItem6.Click += ConsultaDepositoToolStripMenuItem6_Click;
+            // 
+            // balanzaToolStripMenuItem
+            // 
+            balanzaToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { parametrizacionBalanzaToolStripMenuItem });
+            balanzaToolStripMenuItem.Name = "balanzaToolStripMenuItem";
+            balanzaToolStripMenuItem.Size = new Size(59, 19);
+            balanzaToolStripMenuItem.Text = "Balanza";
+            // 
+            // parametrizacionBalanzaToolStripMenuItem
+            // 
+            parametrizacionBalanzaToolStripMenuItem.Name = "parametrizacionBalanzaToolStripMenuItem";
+            parametrizacionBalanzaToolStripMenuItem.Size = new Size(202, 22);
+            parametrizacionBalanzaToolStripMenuItem.Text = "Parametrizacion Balanza";
+            parametrizacionBalanzaToolStripMenuItem.Click += ParametrizacionBalanzaToolStripMenuItem_Click;
             // 
             // salirToolStripMenuItem
             // 
@@ -352,23 +366,24 @@
             btnProveedor.UseVisualStyleBackColor = true;
             btnProveedor.Click += ConsultaProveedorToolStripMenuItem4_Click;
             // 
-            // iconButton1
+            // btnProveedorConsulta
             // 
-            iconButton1.Dock = DockStyle.Top;
-            iconButton1.FlatAppearance.BorderSize = 0;
-            iconButton1.FlatStyle = FlatStyle.Flat;
-            iconButton1.IconChar = FontAwesome.Sharp.IconChar.Truck;
-            iconButton1.IconColor = Color.Gray;
-            iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            iconButton1.IconSize = 25;
-            iconButton1.ImageAlign = ContentAlignment.MiddleLeft;
-            iconButton1.Location = new Point(0, 92);
-            iconButton1.Name = "iconButton1";
-            iconButton1.Size = new Size(124, 46);
-            iconButton1.TabIndex = 7;
-            iconButton1.Text = "Deposito";
-            iconButton1.TextImageRelation = TextImageRelation.ImageBeforeText;
-            iconButton1.UseVisualStyleBackColor = true;
+            btnProveedorConsulta.Dock = DockStyle.Top;
+            btnProveedorConsulta.FlatAppearance.BorderSize = 0;
+            btnProveedorConsulta.FlatStyle = FlatStyle.Flat;
+            btnProveedorConsulta.IconChar = FontAwesome.Sharp.IconChar.Truck;
+            btnProveedorConsulta.IconColor = Color.Gray;
+            btnProveedorConsulta.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnProveedorConsulta.IconSize = 25;
+            btnProveedorConsulta.ImageAlign = ContentAlignment.MiddleLeft;
+            btnProveedorConsulta.Location = new Point(0, 92);
+            btnProveedorConsulta.Name = "btnProveedorConsulta";
+            btnProveedorConsulta.Size = new Size(124, 46);
+            btnProveedorConsulta.TabIndex = 7;
+            btnProveedorConsulta.Text = "Deposito";
+            btnProveedorConsulta.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnProveedorConsulta.UseVisualStyleBackColor = true;
+            btnProveedorConsulta.Click += ConsultaDepositoToolStripMenuItem6_Click;
             // 
             // iconButton2
             // 
@@ -388,20 +403,6 @@
             iconButton2.TextImageRelation = TextImageRelation.ImageBeforeText;
             iconButton2.UseVisualStyleBackColor = true;
             iconButton2.Click += BtnConfiguracionCompraVenta_Click;
-            // 
-            // balanzaToolStripMenuItem
-            // 
-            balanzaToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { parametrizacionBalanzaToolStripMenuItem });
-            balanzaToolStripMenuItem.Name = "balanzaToolStripMenuItem";
-            balanzaToolStripMenuItem.Size = new Size(59, 19);
-            balanzaToolStripMenuItem.Text = "Balanza";
-            // 
-            // parametrizacionBalanzaToolStripMenuItem
-            // 
-            parametrizacionBalanzaToolStripMenuItem.Name = "parametrizacionBalanzaToolStripMenuItem";
-            parametrizacionBalanzaToolStripMenuItem.Size = new Size(202, 22);
-            parametrizacionBalanzaToolStripMenuItem.Text = "Parametrizacion Balanza";
-            parametrizacionBalanzaToolStripMenuItem.Click += ParametrizacionBalanzaToolStripMenuItem_Click;
             // 
             // _00110_ModuloInventario
             // 
@@ -461,7 +462,7 @@
         private ToolStripMenuItem nuevaListaDePrecioToolStripMenuItem;
         private ToolStripMenuItem consultaToolStripMenuItem7;
         private FontAwesome.Sharp.IconButton iconButton2;
-        private FontAwesome.Sharp.IconButton iconButton1;
+        private FontAwesome.Sharp.IconButton btnProveedorConsulta;
         private ToolStripMenuItem balanzaToolStripMenuItem;
         private ToolStripMenuItem parametrizacionBalanzaToolStripMenuItem;
     }

@@ -25,9 +25,9 @@ namespace Sidkenu.AccesoDatos.CadenaConexion
             switch (ambiente)
             {
                 case TipoAmbiente.Desarrollo:
-                    // servidor = $@"ELOHIM\SIDKENUSQL";
+                    servidor = $@"ELOHIM\SIDKENUSQL";
                     // servidor = $@"DESKTOP-46RS64M";
-                    servidor = $@"DIME-CDAUDI7"; 
+                    // servidor = $@"DIME-CDAUDI7"; 
                     // servidor = @"DESKTOP-U5EMC52";
                     break;
                 case TipoAmbiente.DesarrolloBdExterno:
