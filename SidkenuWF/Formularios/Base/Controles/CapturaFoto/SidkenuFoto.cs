@@ -44,6 +44,7 @@ namespace SidkenuWF.Formularios.Base.Controles.Foto
         {
             if (openDialog.ShowDialog() == DialogResult.OK)
             {
+                // TODO: Validar la extension, subiendo un archivo SVG se produjo una OutOfMemoryException
                 this.imgFoto.Image = !string.IsNullOrEmpty(openDialog.FileName)
                     ? Image.FromFile(openDialog.FileName)
                     : Properties.Resources.ImagenFondo;

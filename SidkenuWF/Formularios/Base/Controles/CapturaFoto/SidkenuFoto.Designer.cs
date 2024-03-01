@@ -153,6 +153,7 @@
             // openDialog
             // 
             openDialog.FileName = "openFileDialog1";
+            openDialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.gif;";
             // 
             // SidkenuFoto
             // 
