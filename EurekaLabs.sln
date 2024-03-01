@@ -9,7 +9,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Presentacion", "1 - Pre
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - LogicaNegocio", "2 - LogicaNegocio", "{A7A12EFB-E5DB-4E83-AA9C-66AAAEB3F16B}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - AccedoDatos", "3 - AccedoDatos", "{D0240310-A2BA-4CBC-B326-C119E7E5D511}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - AccesoDatos", "3 - AccesoDatos", "{D0240310-A2BA-4CBC-B326-C119E7E5D511}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sidkenu.LogicaNegocio", "Sidkenu.LogicaNegocio\Sidkenu.LogicaNegocio.csproj", "{41359D3E-68BA-4BBD-AA0A-2B19EAA4B9FE}"
 EndProject
@@ -17,7 +17,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sidkenu.AccesoDatos", "Sidk
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Tests", "4 - Tests", "{565E828D-D19C-483A-B3DD-15A24DD2C079}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sidkenu.LogicaNegocio.UnitTests", "Sidkenu.LogicaNegocio.UnitTests\Sidkenu.LogicaNegocio.UnitTests.csproj", "{2B526438-DF51-41AB-8EB6-27AF3CDDCEEE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sidkenu.LogicaNegocio.UnitTests", "Sidkenu.LogicaNegocio.UnitTests\Sidkenu.LogicaNegocio.UnitTests.csproj", "{2B526438-DF51-41AB-8EB6-27AF3CDDCEEE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
