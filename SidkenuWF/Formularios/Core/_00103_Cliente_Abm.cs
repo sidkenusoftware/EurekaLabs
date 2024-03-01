@@ -138,6 +138,16 @@ namespace SidkenuWF.Formularios.Core
                         Message = "Por favor ingrese los campos Obligatorios."
                     };
                 }
+
+                if (!Validacion.ValidarEmail(txtCorreoElectronico.Text))
+                {
+                    return new ResultDTO 
+                    {
+                        State = false,
+                        Message= "El Correo Electrónico NO tiene el formato correcto"
+                    };
+                }
+
                 var registro = AsignarDatos();
 
                 var result = _clienteServicio.Add(registro, Properties.Settings.Default.UserLogin);
@@ -184,6 +194,15 @@ namespace SidkenuWF.Formularios.Core
                     {
                         State = false,
                         Message = "Por favor ingrese los campos Obligatorios."
+                    };
+                }
+
+                if (!Validacion.ValidarEmail(txtCorreoElectronico.Text))
+                {
+                    return new ResultDTO
+                    {
+                        State = false,
+                        Message = "El Correo Electrónico NO tiene el formato correcto"
                     };
                 }
 

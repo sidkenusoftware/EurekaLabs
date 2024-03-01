@@ -131,6 +131,14 @@ namespace SidkenuWF.Formularios.Base.Controles
                 return false;
             }
 
+            if (!Validacion.ValidarEmail(txtCorreoElectronico.Text))
+            {
+                MessageBox.Show("El Correo Electrónico NO tiene el formato correcto", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtCorreoElectronico.Focus();
+
+                return false;
+            }
+
             if (string.IsNullOrEmpty(txtTelefono.Text))
             {
                 MessageBox.Show("El Teléfono es un dato Obligatorio", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Information);

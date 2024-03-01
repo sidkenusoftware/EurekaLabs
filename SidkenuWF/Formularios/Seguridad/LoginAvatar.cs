@@ -34,7 +34,9 @@ namespace SidkenuWF.Formularios.Seguridad
 
             if (result != null && result.State)
             {
-                foreach (var item in (List<UsuarioDTO>)result.Data)
+                var listaUsuarios = (List<UsuarioDTO>)result.Data;
+
+                foreach (var item in listaUsuarios.Where(x=>x.Existe).ToList())
                 {
                     var nuevoAvatar = new CtrolLoginAvatar
                     {
