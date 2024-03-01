@@ -11,6 +11,7 @@ namespace SidkenuWF.Formularios.Base.Controles
             InitializeComponent();
 
             this.lblAnuncio.Text += $" Importante: Al finalizar la registración inicial, se le enviará un correo electrónico con los datos para que pueda ingresar al Sistema {Constantes.FormularioConstantes.Titulo}";
+            dtpFechaNacimiento.MaxDate = DateTime.Now.AddYears(-18); // Validar que la persona tenga al menos 18 años
         }
 
         public override bool VerificarDatosObligatorios()

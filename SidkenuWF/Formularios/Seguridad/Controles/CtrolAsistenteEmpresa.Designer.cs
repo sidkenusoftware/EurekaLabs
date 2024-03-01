@@ -297,7 +297,7 @@
             label5.Name = "label5";
             label5.Size = new Size(61, 16);
             label5.TabIndex = 80;
-            label5.Text = "Direccion";
+            label5.Text = "Dirección";
             // 
             // label4
             // 
