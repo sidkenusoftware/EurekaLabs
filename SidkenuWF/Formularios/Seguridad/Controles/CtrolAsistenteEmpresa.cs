@@ -1,4 +1,5 @@
 ﻿using Serilog;
+using Sidkenu.LogicaNegocio.Extensiones;
 using Sidkenu.LogicaNegocio.Servicios.DTOs.Seguridad.AsistenteCargaInicial;
 using Sidkenu.LogicaNegocio.Servicios.DTOs.Seguridad.Localidad;
 using Sidkenu.LogicaNegocio.Servicios.DTOs.Seguridad.Provincia;
@@ -126,6 +127,14 @@ namespace SidkenuWF.Formularios.Base.Controles
             if (string.IsNullOrEmpty(txtCorreoElectronico.Text))
             {
                 MessageBox.Show("El Correo Electrónico es un dato Obligatorio", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtCorreoElectronico.Focus();
+
+                return false;
+            }
+
+            if (!txtCorreoElectronico.Text.IsValidEmail())
+            {
+                MessageBox.Show("Formato de Email inválido", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txtCorreoElectronico.Focus();
 
                 return false;

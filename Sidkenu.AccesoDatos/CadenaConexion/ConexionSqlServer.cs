@@ -17,7 +17,7 @@ namespace Sidkenu.AccesoDatos.CadenaConexion
         //    $"Encrypt=False; " +
         //    $"TrustServerCertificate=False;";
 
-        public override string Obtener => "Server=(localdb)\\mssqllocaldb;Database=Commerce;Trusted_Connection=True;MultipleActiveResultSets=true";
+        public override string Obtener => "Server=(localdb)\\mssqllocaldb;Database=EurekaCommerce;Trusted_Connection=True;MultipleActiveResultSets=true";
 
         private string ObtenerServidor(TipoAmbiente ambiente)
         {
