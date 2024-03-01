@@ -65,6 +65,18 @@ namespace Sidkenu.LogicaNegocio.UnitTests
             // Arrange & Act
             return phoneNumber.IsValidPhoneNumber();
         }
+
+        [TestCase("20123404329", ExpectedResult = true)]
+        [TestCase("20-12340432-9", ExpectedResult = true)]
+        [TestCase("2012340432", ExpectedResult = false)] // Longitud incorrecta
+        [TestCase("20-12340432-91", ExpectedResult = false)] // Longitud incorrecta
+        [TestCase("abc-def-ghij", ExpectedResult = false)] // Caracteres no numéricos
+        [TestCase("123456789012345", ExpectedResult = false)] // Longitud incorrecta
+        public bool IsValidCuitCuil_ValidCuitCuil_ReturnsExpected(string cuitCuil)
+        {
+            // Arrange & Act
+            return cuitCuil.IsValidCuitCuil();
+        }
     }
 
 }

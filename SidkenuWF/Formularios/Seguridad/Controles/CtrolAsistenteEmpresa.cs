@@ -124,6 +124,14 @@ namespace SidkenuWF.Formularios.Base.Controles
                 return false;
             }
 
+            if (!txtCuit.Text.IsValidCuitCuil())
+            {
+                MessageBox.Show("El formato de CUIT es incorrecto. Debería ser similar a 20-12345678-9 o 19083456789", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtCuit.Focus();
+
+                return false;
+            }
+
             if (string.IsNullOrEmpty(txtCorreoElectronico.Text))
             {
                 MessageBox.Show("El Correo Electrónico es un dato Obligatorio", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Information);

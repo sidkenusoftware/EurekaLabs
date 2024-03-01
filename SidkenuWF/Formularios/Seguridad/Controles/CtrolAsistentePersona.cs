@@ -47,6 +47,14 @@ namespace SidkenuWF.Formularios.Base.Controles
                 return false;
             }
 
+            if (!txtCuil.Text.IsValidCuitCuil())
+            {
+                MessageBox.Show("El formato de CUIL es incorrecto. Debería ser similar a 20-12345678-9 o 19083456789", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtCuil.Focus();
+
+                return false;
+            }
+
             if (string.IsNullOrEmpty(txtCorreoElectronico.Text))
             {
                 MessageBox.Show("El Correo Electrónico es un dato Obligatorio", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Information);

@@ -32,5 +32,14 @@ namespace Sidkenu.LogicaNegocio.Extensiones
             // Comprobación con la expresión regular
             return Regex.IsMatch(phoneNumber, phonePattern);
         }
+
+        public static bool IsValidCuitCuil(this string cuitCuil)
+        {
+            // Expresión regular para validar un CUIT/CUIL en los formatos deseados
+            string cuitCuilPattern = @"^\d{2}-?\d{8}-?\d$";
+
+            // Comprobación con la expresión regular
+            return Regex.IsMatch(cuitCuil, cuitCuilPattern);
+        }
     }
 }
