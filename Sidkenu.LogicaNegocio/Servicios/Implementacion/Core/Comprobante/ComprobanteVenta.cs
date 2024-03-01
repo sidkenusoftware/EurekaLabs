@@ -2,6 +2,7 @@
 using Sidkenu.AccesoDatos.Constantes;
 using Sidkenu.AccesoDatos.Constantes.Enum;
 using Sidkenu.AccesoDatos.Entidades.Core;
+using Sidkenu.AccesoDatos.Entidades.Seguridad;
 using Sidkenu.Infraestructura;
 using Sidkenu.LogicaNegocio.Servicios.DTOs.Base;
 using Sidkenu.LogicaNegocio.Servicios.DTOs.Core.Articulo;
@@ -612,6 +613,48 @@ namespace Sidkenu.LogicaNegocio.Servicios.Implementacion.Core.Comprobante
                 {
                     State = true,
                     Data = listaComprobantes.ToList()
+                };
+            }
+            catch (Exception ex)
+            {
+                return new ResultDTO
+                {
+                    Message = ex.Message,
+                    State = false
+                };
+            }
+        }
+
+        public override ResultDTO GetDatosEstadisticos(DateTime fechaInicio, DateTime fechaFin, Guid empresaId)
+        {
+            using var _context = new DataContext();
+
+            try
+            {
+                var _fechaInicio = new DateTime(fechaInicio.Year, fechaInicio.Month, fechaInicio.Day, 0, 0, 0);
+                var _fechaFin = new DateTime(fechaFin.Year, fechaFin.Month, fechaFin.Day, 23, 59, 59);
+
+                Expression<Func<AccesoDatos.Entidades.Core.ComprobanteVenta, bool>> filtro = filtro => true;
+
+                filtro = filtro.And(x => x.EmpresaId == empresaId && x.EstadoComprobante == EstadoComprobante.Facturado);
+
+                filtro = filtro.And(x => x.Fecha >= _fechaInicio && x.Fecha <= _fechaFin);
+
+                var entities = _context.Comprobantes.OfType<AccesoDatos.Entidades.Core.ComprobanteVenta>()
+                    .AsNoTracking()
+                    .Include(x => x.Empresa)
+                    .Include(x => x.Persona)
+                    .Include(x => x.Cliente)
+                    .Include(x => x.Movimientos).ThenInclude(x => x.CajaDetalle)
+                    .Include(x => x.Detalles)
+                    .Where(filtro)
+                    .OrderByDescending(d => d.Fecha)
+                    .ToList();
+
+                return new ResultDTO
+                {
+                    State = true,
+                    Data = Mapper.Map<IEnumerable<ComprobanteVentaDTO>>(entities)
                 };
             }
             catch (Exception ex)

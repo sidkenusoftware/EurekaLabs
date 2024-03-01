@@ -1,4 +1,5 @@
 using Serilog;
+using Sidkenu.AccesoDatos.CadenaConexion;
 using Sidkenu.AccesoDatos.Constantes;
 using Sidkenu.LogicaNegocio.Servicios.DTOs.Seguridad.Configuracion;
 using Sidkenu.LogicaNegocio.Servicios.DTOs.Seguridad.Empresa;
@@ -180,7 +181,11 @@ namespace SidkenuWF
 
         private void BtnModuloDashBoard_Click(object? sender, EventArgs e)
         {
-            var formulario = new _00114_ModuloDashBoard(_seguridadServicio, _configuracionServicio, _logger)
+            var formulario = new _00114_ModuloDashBoard(_seguridadServicio, 
+                _configuracionServicio, 
+                _logger,
+                Program.Container.GetInstance<IConexionServicio>(),
+                Program.Container.GetInstance<IComprobanteServicio>())
             {
                 TituloModulo = ((Button)sender).Tag.ToString(),
                 // ColorTituloModulo = ColorAleatorio.Obtener(((Button)sender).Tag.ToString()[..1])

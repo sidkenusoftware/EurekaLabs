@@ -50,23 +50,25 @@
             // 
             // lblTitulo
             // 
+            lblTitulo.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             lblTitulo.BackColor = Color.Transparent;
             lblTitulo.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             lblTitulo.ForeColor = Color.Yellow;
             lblTitulo.Location = new Point(91, 7);
             lblTitulo.Name = "lblTitulo";
-            lblTitulo.Size = new Size(166, 28);
+            lblTitulo.Size = new Size(226, 28);
             lblTitulo.TabIndex = 1;
             lblTitulo.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblValor
             // 
+            lblValor.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             lblValor.BackColor = Color.Transparent;
             lblValor.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
             lblValor.ForeColor = Color.White;
             lblValor.Location = new Point(91, 43);
             lblValor.Name = "lblValor";
-            lblValor.Size = new Size(166, 38);
+            lblValor.Size = new Size(226, 38);
             lblValor.TabIndex = 2;
             lblValor.TextAlign = ContentAlignment.MiddleCenter;
             // 
@@ -79,7 +81,7 @@
             Controls.Add(lblTitulo);
             Controls.Add(imgLogo);
             Name = "CtrolDashboard";
-            Size = new Size(265, 91);
+            Size = new Size(328, 91);
             ((System.ComponentModel.ISupportInitialize)imgLogo).EndInit();
             ResumeLayout(false);
         }

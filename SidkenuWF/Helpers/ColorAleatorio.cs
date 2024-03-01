@@ -36,5 +36,31 @@ namespace SidkenuWF.Helpers
 
             return Color.FromArgb(48, 66, 80);
         }
+
+        public static Color Obtener(int numero)
+        {
+            if (numero >= 0 && numero < 7)
+            {
+                return Color.DarkRed;
+            }
+            else if (numero >= 8 && numero < 14)
+            {
+                return Color.Orange;
+            }
+            else if (numero >= 15 && numero < 20)
+            {
+                return Color.Blue;
+            }
+            else if (numero >= 21 && numero < 25)
+            {
+                return Color.DarkViolet;
+            }
+            else if (numero >= 26 && numero <= 31)
+            {
+                return Color.Green;
+            }
+
+            return Color.FromArgb(48, 66, 80);
+        }
     }
 }

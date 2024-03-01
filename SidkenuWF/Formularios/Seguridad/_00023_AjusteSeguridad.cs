@@ -4,6 +4,7 @@ using Sidkenu.LogicaNegocio.Servicios.DTOs.Seguridad.Configuracion;
 using Sidkenu.LogicaNegocio.Servicios.DTOs.Seguridad.Modulo;
 using Sidkenu.LogicaNegocio.Servicios.Interface.Seguridad;
 using SidkenuWF.Formularios.Base;
+using SidkenuWF.Formularios.Base.Constantes;
 using SidkenuWF.Helpers;
 
 namespace SidkenuWF.Formularios.Seguridad
@@ -37,6 +38,8 @@ namespace SidkenuWF.Formularios.Seguridad
             txtPuerto.KeyPress += Validacion.NoLetras;
 
             CargarDatos(Properties.Settings.Default.EmpresaId);
+
+            this.Text = FormularioConstantes.Titulo;
         }
 
         public override void CargarDatos(Guid? empresaId)

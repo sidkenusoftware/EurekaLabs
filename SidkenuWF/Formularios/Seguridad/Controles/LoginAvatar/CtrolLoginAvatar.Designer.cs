@@ -51,6 +51,8 @@
             // 
             imgFoto.BackColor = Color.FromArgb(64, 64, 64);
             imgFoto.Location = new Point(3, 2);
+            imgFoto.MaximumSize = new Size(140, 138);
+            imgFoto.MinimumSize = new Size(140, 138);
             imgFoto.Name = "imgFoto";
             imgFoto.Size = new Size(140, 138);
             imgFoto.SizeMode = PictureBoxSizeMode.StretchImage;

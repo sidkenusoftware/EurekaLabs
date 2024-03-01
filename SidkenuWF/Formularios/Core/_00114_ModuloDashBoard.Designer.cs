@@ -95,16 +95,18 @@
             panel1.Controls.Add(chartVentaSemanal);
             panel1.Location = new Point(3, 3);
             panel1.Name = "panel1";
-            panel1.Size = new Size(371, 296);
+            panel1.Size = new Size(632, 296);
             panel1.TabIndex = 0;
             // 
             // label1
             // 
+            label1.BackColor = Color.White;
             label1.Dock = DockStyle.Fill;
             label1.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = Color.FromArgb(192, 64, 0);
             label1.Location = new Point(0, 0);
             label1.Name = "label1";
-            label1.Size = new Size(371, 35);
+            label1.Size = new Size(632, 35);
             label1.TabIndex = 1;
             label1.Text = "Ventas Semanales";
             label1.TextAlign = ContentAlignment.MiddleCenter;
@@ -122,7 +124,7 @@
             series1.Legend = "Legend1";
             series1.Name = "Ventas";
             chartVentaSemanal.Series.Add(series1);
-            chartVentaSemanal.Size = new Size(371, 261);
+            chartVentaSemanal.Size = new Size(632, 261);
             chartVentaSemanal.TabIndex = 0;
             // 
             // panel2
@@ -130,20 +132,21 @@
             panel2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             panel2.BackColor = Color.FromArgb(224, 224, 224);
             panel2.Controls.Add(flowLayoutPanel1);
-            panel2.Location = new Point(380, 3);
+            panel2.Location = new Point(3, 305);
             panel2.Name = "panel2";
-            panel2.Size = new Size(275, 296);
+            panel2.Size = new Size(632, 296);
             panel2.TabIndex = 1;
             // 
             // flowLayoutPanel1
             // 
+            flowLayoutPanel1.BackColor = Color.White;
             flowLayoutPanel1.Controls.Add(ctrolDashTotalVentas);
             flowLayoutPanel1.Controls.Add(ctrolDashCantClientes);
             flowLayoutPanel1.Controls.Add(ctrolDashCaja);
             flowLayoutPanel1.Dock = DockStyle.Fill;
             flowLayoutPanel1.Location = new Point(0, 0);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(275, 296);
+            flowLayoutPanel1.Size = new Size(632, 296);
             flowLayoutPanel1.TabIndex = 0;
             // 
             // ctrolDashTotalVentas
@@ -157,7 +160,7 @@
             // ctrolDashCantClientes
             // 
             ctrolDashCantClientes.BackColor = Color.FromArgb(64, 64, 64);
-            ctrolDashCantClientes.Location = new Point(3, 100);
+            ctrolDashCantClientes.Location = new Point(274, 3);
             ctrolDashCantClientes.Name = "ctrolDashCantClientes";
             ctrolDashCantClientes.Size = new Size(265, 91);
             ctrolDashCantClientes.TabIndex = 1;
@@ -165,7 +168,7 @@
             // ctrolDashCaja
             // 
             ctrolDashCaja.BackColor = Color.FromArgb(64, 64, 64);
-            ctrolDashCaja.Location = new Point(3, 197);
+            ctrolDashCaja.Location = new Point(3, 100);
             ctrolDashCaja.Name = "ctrolDashCaja";
             ctrolDashCaja.Size = new Size(265, 91);
             ctrolDashCaja.TabIndex = 2;
@@ -179,6 +182,9 @@
             Controls.Add(menuStrip1);
             Name = "_00114_ModuloDashBoard";
             Text = "DashBoard";
+            FormClosed += _00114_ModuloDashBoard_FormClosed;
+            Load += _00114_ModuloDashBoard_Load;
+            Shown += _00114_ModuloDashBoard_Shown;
             Controls.SetChildIndex(pnlTitulo, 0);
             Controls.SetChildIndex(menuStrip1, 0);
             Controls.SetChildIndex(pnlMenuLateral, 0);

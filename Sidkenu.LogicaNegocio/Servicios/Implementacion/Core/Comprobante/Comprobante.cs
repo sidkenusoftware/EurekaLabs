@@ -103,7 +103,7 @@ namespace Sidkenu.LogicaNegocio.Servicios.Implementacion.Core.Comprobante
             }
             catch (Exception ex)
             {
-                return new ResultDTO { State = false, Data = null, Message = "Ocurrio un error al crear el nuevo Comprobante Base" };
+                return new ResultDTO { State = false, Data = null, Message = "Ocurrio un error al obtener los datos" };
             }
         }
 
@@ -118,7 +118,22 @@ namespace Sidkenu.LogicaNegocio.Servicios.Implementacion.Core.Comprobante
             }
             catch (Exception ex)
             {
-                return new ResultDTO { State = false, Data = null, Message = "Ocurrio un error al crear el nuevo Comprobante Base" };
+                return new ResultDTO { State = false, Data = null, Message = "Ocurrio un error al obtener los datos" };
+            }
+        }
+
+        public virtual ResultDTO GetDatosEstadisticos(DateTime fechaInicio, DateTime fechaFin, Guid empresaId)
+        {
+            try
+            {
+                return new ResultDTO
+                {
+                    State = true,
+                };
+            }
+            catch (Exception ex)
+            {
+                return new ResultDTO { State = false, Data = null, Message = "Ocurrio un error al obtener los datos estadisticos" };
             }
         }
 

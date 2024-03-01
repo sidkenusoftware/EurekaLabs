@@ -178,5 +178,10 @@ namespace SidkenuWF.Formularios.Seguridad
         {
 
         }
+
+        private void pnlFondo_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

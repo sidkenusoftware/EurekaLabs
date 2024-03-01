@@ -39,8 +39,14 @@
             txtUsuario = new TextBox();
             label1 = new Label();
             lblLogin = new Label();
+            pnlFondo = new Panel();
+            label4 = new Label();
+            pictureBox1 = new PictureBox();
+            label3 = new Label();
             pnlDerecho.SuspendLayout();
             pnlLogin.SuspendLayout();
+            pnlFondo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // pnlDerecho
@@ -184,6 +190,54 @@
             lblLogin.TabIndex = 0;
             lblLogin.Text = "Login";
             // 
+            // pnlFondo
+            // 
+            pnlFondo.BackColor = Color.Transparent;
+            pnlFondo.BackgroundImage = Properties.Resources.paisaje;
+            pnlFondo.BackgroundImageLayout = ImageLayout.Stretch;
+            pnlFondo.Controls.Add(label4);
+            pnlFondo.Controls.Add(pictureBox1);
+            pnlFondo.Controls.Add(label3);
+            pnlFondo.Dock = DockStyle.Fill;
+            pnlFondo.Location = new Point(0, 0);
+            pnlFondo.Name = "pnlFondo";
+            pnlFondo.Size = new Size(486, 450);
+            pnlFondo.TabIndex = 1;
+            pnlFondo.Paint += pnlFondo_Paint;
+            // 
+            // label4
+            // 
+            label4.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            label4.Font = new Font("Arial", 24F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.ForeColor = Color.Yellow;
+            label4.Location = new Point(34, 275);
+            label4.Name = "label4";
+            label4.Size = new Size(420, 98);
+            label4.TabIndex = 2;
+            label4.Text = "Desata el poder de tu empresa con nuestro sistema de gestión, donde cada función trabaja en armonía para catapultarte hacia el éxito.";
+            label4.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources.Logo_FondoBlanco;
+            pictureBox1.Location = new Point(34, 23);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(64, 65);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 1;
+            pictureBox1.TabStop = false;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Arial", 36F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.ForeColor = Color.White;
+            label3.Location = new Point(105, 29);
+            label3.Name = "label3";
+            label3.Size = new Size(375, 55);
+            label3.TabIndex = 0;
+            label3.Text = "Eureka Labs 1.0";
+            // 
             // Login
             // 
             AcceptButton = btnIngresar;
@@ -191,6 +245,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             CancelButton = btnCancelar;
             ClientSize = new Size(800, 450);
+            Controls.Add(pnlFondo);
             Controls.Add(pnlDerecho);
             MaximizeBox = false;
             MinimizeBox = false;
@@ -201,6 +256,9 @@
             pnlDerecho.ResumeLayout(false);
             pnlLogin.ResumeLayout(false);
             pnlLogin.PerformLayout();
+            pnlFondo.ResumeLayout(false);
+            pnlFondo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 
@@ -217,5 +275,9 @@
         private TextBox txtUsuario;
         private Label label1;
         private LinkLabel linkOlvidastePassword;
+        private Panel pnlFondo;
+        private Label label4;
+        private PictureBox pictureBox1;
+        private Label label3;
     }
 }

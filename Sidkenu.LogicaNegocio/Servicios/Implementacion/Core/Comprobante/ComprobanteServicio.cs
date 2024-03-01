@@ -1,5 +1,7 @@
 ﻿using AutoMapper;
 using Sidkenu.AccesoDatos.Constantes.Enum;
+using Sidkenu.AccesoDatos.Entidades.Seguridad;
+using Sidkenu.Infraestructura;
 using Sidkenu.LogicaNegocio.Servicios.DTOs.Base;
 using Sidkenu.LogicaNegocio.Servicios.DTOs.Core.Comprobante;
 using Sidkenu.LogicaNegocio.Servicios.Implementacion.Base;
@@ -32,7 +34,7 @@ namespace Sidkenu.LogicaNegocio.Servicios.Implementacion.Core.Comprobante
 
             _diccionarioComprobante = new Dictionary<TipoComprobante, string>();
 
-            CargarDiccionario(_diccionarioComprobante);            
+            CargarDiccionario(_diccionarioComprobante);
         }
 
         private void CargarDiccionario(Dictionary<TipoComprobante, string> diccionario)
@@ -72,7 +74,7 @@ namespace Sidkenu.LogicaNegocio.Servicios.Implementacion.Core.Comprobante
             }
             else
             {
-                return new ResultDTO() 
+                return new ResultDTO()
                 {
                     State = false,
                     Message = "Ocurrió un error al grabar la Factura",
@@ -137,6 +139,40 @@ namespace Sidkenu.LogicaNegocio.Servicios.Implementacion.Core.Comprobante
                 comprobanteResult.ConfiguracionCoreServicio = _configuracionCoreServicio;
 
                 return comprobanteResult.GetComprobantesPendientesCobroVentaMostrador(id, empresaId, cuit);
+            }
+            else
+            {
+                return new ResultDTO()
+                {
+                    State = false,
+                    Message = "Ocurrió un error al grabar la Factura",
+                };
+            }
+        }
+
+        public ResultDTO GetDatosEstadisticos(DateTime fechaInicio, DateTime fechaFin, Guid empresaId)
+        {
+            // Valida que este en el diccionario
+            if (!_diccionarioComprobante.TryGetValue(TipoComprobante.Venta, out string? tipoComprobante))
+            {
+                throw new Exception("No se encontro el Comprobante seleccionado");
+            }
+
+            // Valida el tipo de comprobante (clase)
+            var _comprobante = Type.GetType(tipoComprobante) ?? throw new Exception("Ocurrio un error al obtener el comprobante");
+
+            var comprobanteResult = Activator.CreateInstance(_comprobante) as Comprobante;
+
+            if (comprobanteResult != null)
+            {
+                comprobanteResult.ConfiguracionServicio = base._configuracionServicio;
+                comprobanteResult.Mapper = base._mapper;
+                comprobanteResult.ArticuloServicio = _articuloServicio;
+                comprobanteResult.ArticuloTemporalServicio = _articuloTemporalServicio;
+                comprobanteResult.OrdenFabricacionServicio = _ordenFabricacionServicio;
+                comprobanteResult.ConfiguracionCoreServicio = _configuracionCoreServicio;
+
+                return comprobanteResult.GetDatosEstadisticos(fechaInicio, fechaFin, empresaId);
             }
             else
             {
