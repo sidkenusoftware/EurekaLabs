@@ -1,4 +1,3 @@
-using NUnit.Framework;
 using Sidkenu.LogicaNegocio.Extensiones;
 
 namespace Sidkenu.LogicaNegocio.UnitTests
@@ -39,6 +38,32 @@ namespace Sidkenu.LogicaNegocio.UnitTests
 
             // Assert
             Assert.IsFalse(isValid);
+        }
+
+        [TestCase("123-456-7890", ExpectedResult = true)]
+        [TestCase("999-999-9999", ExpectedResult = true)]
+        [TestCase("1234567890", ExpectedResult = false)] // Sin guiones
+        [TestCase("1234-567-890", ExpectedResult = false)] // Formato incorrecto
+        [TestCase("abc-def-ghij", ExpectedResult = false)] // Caracteres no numéricos
+        [TestCase("12-3456-7890", ExpectedResult = false)] // Longitud incorrecta
+        public bool IsValidUsaPhoneNumber_ValidPhone_ReturnsExpected(string phoneNumber)
+        {
+            // Arrange & Act
+            return phoneNumber.IsValidUsaPhoneNumber();
+        }
+
+        [TestCase("+54 9 381 3630058", ExpectedResult = true)]
+        [TestCase("+5493813630058", ExpectedResult = true)]
+        [TestCase("+54 9 3813 63-0058", ExpectedResult = true)]
+        [TestCase("+123 456 7890", ExpectedResult = false)] // Prefijo de país incorrecto
+        [TestCase("123-456-7890", ExpectedResult = false)] // Formato incorrecto para el método IsValidPhoneNumber
+        [TestCase("999-999-9999", ExpectedResult = false)] // Formato incorrecto para el método IsValidPhoneNumber
+        [TestCase("abc-def-ghij", ExpectedResult = false)] // Caracteres no numéricos
+        [TestCase("123456789012345", ExpectedResult = false)] // Longitud incorrecta
+        public bool IsValidPhoneNumber_ValidPhone_ReturnsExpected(string phoneNumber)
+        {
+            // Arrange & Act
+            return phoneNumber.IsValidPhoneNumber();
         }
     }
 

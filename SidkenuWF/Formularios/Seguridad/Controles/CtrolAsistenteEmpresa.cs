@@ -148,6 +148,14 @@ namespace SidkenuWF.Formularios.Base.Controles
                 return false;
             }
 
+            if (!txtTelefono.Text.IsValidPhoneNumber())
+            {
+                MessageBox.Show("El formato de Teléfono no es correcto. Debería ser similar a +5493813630058", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtTelefono.Focus();
+
+                return false;
+            }
+
             if (string.IsNullOrEmpty(txtIngresoBruto.Text))
             {
                 MessageBox.Show("El Nro de Ingreso Bruto es un dato Obligatorio", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Information);
