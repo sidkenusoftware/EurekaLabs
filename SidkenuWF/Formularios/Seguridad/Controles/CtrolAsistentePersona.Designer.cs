@@ -86,7 +86,7 @@
             txtNombre.Name = "txtNombre";
             txtNombre.PlaceholderText = "Ej: Cristian";
             txtNombre.Size = new Size(586, 39);
-            txtNombre.TabIndex = 9;
+            txtNombre.TabIndex = 0;
             // 
             // CtrolFoto
             // 
@@ -96,7 +96,7 @@
             CtrolFoto.MinimumSize = new Size(130, 157);
             CtrolFoto.Name = "CtrolFoto";
             CtrolFoto.Size = new Size(130, 188);
-            CtrolFoto.TabIndex = 10;
+            CtrolFoto.TabIndex = 7;
             // 
             // txtApellido
             // 
@@ -107,7 +107,7 @@
             txtApellido.Name = "txtApellido";
             txtApellido.PlaceholderText = "Ej: Apellido";
             txtApellido.Size = new Size(586, 39);
-            txtApellido.TabIndex = 12;
+            txtApellido.TabIndex = 1;
             // 
             // label3
             // 
@@ -129,7 +129,7 @@
             txtTelefono.Name = "txtTelefono";
             txtTelefono.PlaceholderText = "Ej: 999-9999999";
             txtTelefono.Size = new Size(193, 25);
-            txtTelefono.TabIndex = 85;
+            txtTelefono.TabIndex = 4;
             // 
             // txtCuil
             // 
@@ -141,7 +141,7 @@
             txtCuil.Name = "txtCuil";
             txtCuil.PlaceholderText = "Ej: 99-99999999-9";
             txtCuil.Size = new Size(169, 25);
-            txtCuil.TabIndex = 84;
+            txtCuil.TabIndex = 3;
             // 
             // txtDireccion
             // 
@@ -153,7 +153,7 @@
             txtDireccion.Name = "txtDireccion";
             txtDireccion.PlaceholderText = "Ej: Sarmiento 134";
             txtDireccion.Size = new Size(463, 25);
-            txtDireccion.TabIndex = 83;
+            txtDireccion.TabIndex = 2;
             // 
             // label7
             // 
@@ -198,7 +198,7 @@
             dtpFechaNacimiento.Location = new Point(141, 311);
             dtpFechaNacimiento.Name = "dtpFechaNacimiento";
             dtpFechaNacimiento.Size = new Size(148, 25);
-            dtpFechaNacimiento.TabIndex = 89;
+            dtpFechaNacimiento.TabIndex = 6;
             // 
             // label14
             // 
@@ -222,7 +222,7 @@
             txtCorreoElectronico.Name = "txtCorreoElectronico";
             txtCorreoElectronico.PlaceholderText = "Ej: sidkenusoftware@gmail.com";
             txtCorreoElectronico.Size = new Size(463, 25);
-            txtCorreoElectronico.TabIndex = 87;
+            txtCorreoElectronico.TabIndex = 5;
             // 
             // label8
             // 

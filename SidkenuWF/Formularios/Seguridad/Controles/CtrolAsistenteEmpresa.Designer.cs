@@ -118,7 +118,7 @@
             CtrolFoto.MinimumSize = new Size(130, 157);
             CtrolFoto.Name = "CtrolFoto";
             CtrolFoto.Size = new Size(130, 188);
-            CtrolFoto.TabIndex = 4;
+            CtrolFoto.TabIndex = 19;
             // 
             // tabControl1
             // 
@@ -165,7 +165,7 @@
             txtReferente.Name = "txtReferente";
             txtReferente.PlaceholderText = "Ej: Jesus";
             txtReferente.Size = new Size(436, 25);
-            txtReferente.TabIndex = 91;
+            txtReferente.TabIndex = 7;
             // 
             // label10
             // 
@@ -189,7 +189,7 @@
             txtCorreoElectronico.Name = "txtCorreoElectronico";
             txtCorreoElectronico.PlaceholderText = "Ej: sidkenusoftware@gmail.com";
             txtCorreoElectronico.Size = new Size(436, 25);
-            txtCorreoElectronico.TabIndex = 89;
+            txtCorreoElectronico.TabIndex = 6;
             // 
             // txtTelefono
             // 
@@ -201,7 +201,7 @@
             txtTelefono.Name = "txtTelefono";
             txtTelefono.PlaceholderText = "Ej: 999-9999999";
             txtTelefono.Size = new Size(172, 25);
-            txtTelefono.TabIndex = 88;
+            txtTelefono.TabIndex = 5;
             // 
             // txtCuit
             // 
@@ -213,7 +213,7 @@
             txtCuit.Name = "txtCuit";
             txtCuit.PlaceholderText = "Ej: 99-99999999-9";
             txtCuit.Size = new Size(169, 25);
-            txtCuit.TabIndex = 87;
+            txtCuit.TabIndex = 4;
             // 
             // label8
             // 
@@ -261,7 +261,7 @@
             txtDireccion.Name = "txtDireccion";
             txtDireccion.PlaceholderText = "Ej: Sarmiento 134";
             txtDireccion.Size = new Size(436, 25);
-            txtDireccion.TabIndex = 83;
+            txtDireccion.TabIndex = 3;
             // 
             // txtAbreviatura
             // 
@@ -273,7 +273,7 @@
             txtAbreviatura.Name = "txtAbreviatura";
             txtAbreviatura.PlaceholderText = "Ej: SK";
             txtAbreviatura.Size = new Size(172, 25);
-            txtAbreviatura.TabIndex = 82;
+            txtAbreviatura.TabIndex = 2;
             // 
             // txtCodigo
             // 
@@ -285,7 +285,7 @@
             txtCodigo.Name = "txtCodigo";
             txtCodigo.PlaceholderText = "Ej: 123";
             txtCodigo.Size = new Size(169, 25);
-            txtCodigo.TabIndex = 81;
+            txtCodigo.TabIndex = 1;
             // 
             // label5
             // 
@@ -360,7 +360,7 @@
             cmbLocalidad.MaxDropDownItems = 12;
             cmbLocalidad.Name = "cmbLocalidad";
             cmbLocalidad.Size = new Size(323, 25);
-            cmbLocalidad.TabIndex = 103;
+            cmbLocalidad.TabIndex = 17;
             // 
             // btnNuevaLocalidad
             // 
@@ -373,7 +373,7 @@
             btnNuevaLocalidad.Location = new Point(448, 133);
             btnNuevaLocalidad.Name = "btnNuevaLocalidad";
             btnNuevaLocalidad.Size = new Size(35, 25);
-            btnNuevaLocalidad.TabIndex = 102;
+            btnNuevaLocalidad.TabIndex = 18;
             btnNuevaLocalidad.Text = "...";
             btnNuevaLocalidad.UseVisualStyleBackColor = true;
             btnNuevaLocalidad.Click += BtnNuevaLocalidad_Click;
@@ -402,7 +402,7 @@
             cmbProvincia.MaxDropDownItems = 12;
             cmbProvincia.Name = "cmbProvincia";
             cmbProvincia.Size = new Size(323, 25);
-            cmbProvincia.TabIndex = 100;
+            cmbProvincia.TabIndex = 15;
             // 
             // dtpFechaInicioActividades
             // 
@@ -411,7 +411,7 @@
             dtpFechaInicioActividades.Location = new Point(119, 72);
             dtpFechaInicioActividades.Name = "dtpFechaInicioActividades";
             dtpFechaInicioActividades.Size = new Size(148, 25);
-            dtpFechaInicioActividades.TabIndex = 99;
+            dtpFechaInicioActividades.TabIndex = 14;
             // 
             // label14
             // 
@@ -436,7 +436,7 @@
             btnNuevaProvincia.Location = new Point(448, 102);
             btnNuevaProvincia.Name = "btnNuevaProvincia";
             btnNuevaProvincia.Size = new Size(35, 24);
-            btnNuevaProvincia.TabIndex = 97;
+            btnNuevaProvincia.TabIndex = 16;
             btnNuevaProvincia.Text = "...";
             btnNuevaProvincia.UseVisualStyleBackColor = true;
             btnNuevaProvincia.Click += BtnNuevaProvincia_Click;
@@ -464,7 +464,7 @@
             btnNuevoIngresoBruto.Location = new Point(407, 11);
             btnNuevoIngresoBruto.Name = "btnNuevoIngresoBruto";
             btnNuevoIngresoBruto.Size = new Size(35, 24);
-            btnNuevoIngresoBruto.TabIndex = 95;
+            btnNuevoIngresoBruto.TabIndex = 10;
             btnNuevoIngresoBruto.Text = "...";
             btnNuevoIngresoBruto.UseVisualStyleBackColor = true;
             btnNuevoIngresoBruto.Click += BtnNuevoIngresoBruto_Click;
@@ -481,7 +481,7 @@
             cmbIngresoBruto.MaxDropDownItems = 12;
             cmbIngresoBruto.Name = "cmbIngresoBruto";
             cmbIngresoBruto.Size = new Size(282, 25);
-            cmbIngresoBruto.TabIndex = 94;
+            cmbIngresoBruto.TabIndex = 9;
             // 
             // txtIngresoBruto
             // 
@@ -493,7 +493,7 @@
             txtIngresoBruto.Name = "txtIngresoBruto";
             txtIngresoBruto.PlaceholderText = "Ej: 9999999";
             txtIngresoBruto.Size = new Size(127, 25);
-            txtIngresoBruto.TabIndex = 93;
+            txtIngresoBruto.TabIndex = 11;
             // 
             // label9
             // 
@@ -519,7 +519,7 @@
             cmbCondicionIva.MaxDropDownItems = 12;
             cmbCondicionIva.Name = "cmbCondicionIva";
             cmbCondicionIva.Size = new Size(323, 25);
-            cmbCondicionIva.TabIndex = 89;
+            cmbCondicionIva.TabIndex = 12;
             // 
             // btnNuevaCondicionIva
             // 
@@ -532,7 +532,7 @@
             btnNuevaCondicionIva.Location = new Point(448, 42);
             btnNuevaCondicionIva.Name = "btnNuevaCondicionIva";
             btnNuevaCondicionIva.Size = new Size(35, 24);
-            btnNuevaCondicionIva.TabIndex = 91;
+            btnNuevaCondicionIva.TabIndex = 13;
             btnNuevaCondicionIva.Text = "...";
             btnNuevaCondicionIva.UseVisualStyleBackColor = true;
             btnNuevaCondicionIva.Click += BtnNuevaCondicionIva_Click;
