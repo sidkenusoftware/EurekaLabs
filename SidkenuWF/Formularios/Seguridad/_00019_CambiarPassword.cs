@@ -1,4 +1,5 @@
 ﻿using FontAwesome.Sharp;
+using Sidkenu.LogicaNegocio.Extensiones;
 using Sidkenu.LogicaNegocio.Servicios.DTOs.Seguridad.Usuario;
 using Sidkenu.LogicaNegocio.Servicios.Interface.Seguridad;
 
@@ -98,6 +99,14 @@ namespace SidkenuWF.Formularios.Seguridad
             if (string.IsNullOrEmpty(this.txtPaswordNueva.Text))
             {
                 MessageBox.Show("La contraseña NUEVA es Obligatoria", "Atención"
+                    , MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtPaswordNueva.Focus();
+                return;
+            }
+
+            if (!txtPaswordNueva.Text.IsValidPassword())
+            {
+                MessageBox.Show("La contraseña NUEVA debe tener al menos 8 caracteres, una letra mayúscula, una letra minúscula, un carácter especial y un número", "Atención"
                     , MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txtPaswordNueva.Focus();
                 return;

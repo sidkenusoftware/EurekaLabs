@@ -41,5 +41,14 @@ namespace Sidkenu.LogicaNegocio.Extensiones
             // Comprobación con la expresión regular
             return Regex.IsMatch(cuitCuil, cuitCuilPattern);
         }
+
+        public static bool IsValidPassword(this string password)
+        {
+            // Expresión regular para validar una contraseña con al menos 8 caracteres, una letra mayúscula, una letra minúscula, un carácter especial y un número
+            string passwordPattern = @"^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[^a-zA-Z0-9]).{8,}$";
+
+            // Comprobación con la expresión regular
+            return Regex.IsMatch(password, passwordPattern);
+        }
     }
 }

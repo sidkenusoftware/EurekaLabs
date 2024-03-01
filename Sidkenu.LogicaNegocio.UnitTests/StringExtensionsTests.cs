@@ -77,6 +77,39 @@ namespace Sidkenu.LogicaNegocio.UnitTests
             // Arrange & Act
             return cuitCuil.IsValidCuitCuil();
         }
+
+        [TestCase("P@ssw0rd", ExpectedResult = true)] // Válida
+        [TestCase("Password1", ExpectedResult = false)] // Falta carácter especial
+        [TestCase("pass", ExpectedResult = false)] // Menos de 8 caracteres
+        [TestCase("P@ssword", ExpectedResult = false)] // Falta número
+        [TestCase("P@ssw0rd!", ExpectedResult = true)] // Válida
+        [TestCase("PASSWORD1", ExpectedResult = false)] // Falta letra minúscula
+        [TestCase("p@ssword1", ExpectedResult = false)] // Falta letra mayúscula
+        [TestCase("P@ssword123456789", ExpectedResult = true)] // Válida
+        [TestCase("P@ssword!123456789", ExpectedResult = true)] // Válida
+        [TestCase("P@ssw0rd#", ExpectedResult = true)] // Válida
+        [TestCase("P@ssw0rd1", ExpectedResult = true)] // Válida
+        [TestCase("P@ssw0rd1!", ExpectedResult = true)] // Válida
+        [TestCase("P@ssword!@#$%123", ExpectedResult = true)] // Válida
+        [TestCase("P@ssw0rd!@#$%123456", ExpectedResult = true)] // Válida
+        [TestCase("p@ssword", ExpectedResult = false)] // Falta número y letra mayúscula
+        [TestCase("P@SSWORD1", ExpectedResult = false)] // Falta letra minúscula y carácter especial
+        [TestCase("p@ssword!", ExpectedResult = false)] // Falta letra mayúscula y número
+        [TestCase("P@SSWORD!", ExpectedResult = false)] // Falta letra minúscula y número
+        [TestCase("P@ssword1", ExpectedResult = true)] // Válida
+        [TestCase("P@ssword!", ExpectedResult = false)] // Falta un número
+        [TestCase("P@SSWORD1!", ExpectedResult = false)] // Falta una letra minúscula
+        [TestCase("P@ssword1!", ExpectedResult = true)] // Válida
+        [TestCase("P@ssword123", ExpectedResult = true)] // Válida
+        [TestCase("!@#$%&*()", ExpectedResult = false)] // Menos de 8 caracteres
+        [TestCase("12345678", ExpectedResult = false)] // Menos de 8 caracteres
+        [TestCase("P@ssword", ExpectedResult = false)] // Falta número y carácter especial
+        [TestCase("P@SSW0RD!", ExpectedResult = false)] // Falta letra minúscula
+        public bool IsValidPassword_ValidPassword_ReturnsExpected(string password)
+        {
+            // Arrange & Act
+            return password.IsValidPassword();
+        }
     }
 
 }
