@@ -82,7 +82,7 @@
             // 
             // lblTitulo
             // 
-            lblTitulo.Size = new Size(668, 41);
+            lblTitulo.Size = new Size(657, 41);
             // 
             // tabControl1
             // 
