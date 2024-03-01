@@ -67,7 +67,7 @@ namespace SidkenuWF
             }
             else
             {
-                _logger.Error($"Ocurrió un error al obtener la configuracion del sistema. {result.Message}");
+                _logger.Error($"OcurriÃ³ un error al obtener la configuracion del sistema. {result.Message}");
             }
 
             CtrolUserLogin.btnCerrarSesion.Click += BtnCerrarSesion_Click;
@@ -107,13 +107,13 @@ namespace SidkenuWF
             {
                 var modulo = (ModuloDTO)resultModulo.Data;
 
-                // Modulo de DashBoard
+                // Modulo de Dashboard
 
-                CtrolModulosSistema.CtrolModuloDashBoard.Visible = modulo.DashBoard;
-                CtrolModulosSistema.CtrolModuloDashBoard.btnIngresar.Click += BtnModuloDashBoard_Click;
-                CtrolModulosSistema.CtrolModuloDashBoard.Titulo = "DashBoard";
-                CtrolModulosSistema.CtrolModuloDashBoard.Descripcion = "Monitor Gerencial";
-                CtrolModulosSistema.CtrolModuloDashBoard.Icono = FontAwesome.Sharp.IconChar.ChartPie;
+                CtrolModulosSistema.CtrolModuloDashboard.Visible = modulo.Dashboard;
+                CtrolModulosSistema.CtrolModuloDashboard.btnIngresar.Click += BtnModuloDashboard_Click;
+                CtrolModulosSistema.CtrolModuloDashboard.Titulo = "Dashboard";
+                CtrolModulosSistema.CtrolModuloDashboard.Descripcion = "Monitor Gerencial";
+                CtrolModulosSistema.CtrolModuloDashboard.Icono = FontAwesome.Sharp.IconChar.ChartPie;
 
                 // Modulo de Seguridad
 
@@ -151,8 +151,8 @@ namespace SidkenuWF
 
                 CtrolModulosSistema.CtrolModuloFabricacion.Visible = modulo.Fabricacion;
                 CtrolModulosSistema.CtrolModuloFabricacion.btnIngresar.Click += BtnModuloFabricacion_Click;
-                CtrolModulosSistema.CtrolModuloFabricacion.Titulo = "Fabricación";
-                CtrolModulosSistema.CtrolModuloFabricacion.Descripcion = "Modulo para Gestionar la Fabricación de Artículos";
+                CtrolModulosSistema.CtrolModuloFabricacion.Titulo = "FabricaciÃ³n";
+                CtrolModulosSistema.CtrolModuloFabricacion.Descripcion = "Modulo para Gestionar la FabricaciÃ³n de ArtÃ­culos";
                 CtrolModulosSistema.CtrolModuloFabricacion.Icono = FontAwesome.Sharp.IconChar.Industry;
 
                 // Modulo de Caja
@@ -178,9 +178,9 @@ namespace SidkenuWF
         // =======================================              Modulos            ========================================== //
         // ================================================================================================================== //
 
-        private void BtnModuloDashBoard_Click(object? sender, EventArgs e)
+        private void BtnModuloDashboard_Click(object? sender, EventArgs e)
         {
-            var formulario = new _00114_ModuloDashBoard(_seguridadServicio, _configuracionServicio, _logger)
+            var formulario = new _00114_ModuloDashboard(_seguridadServicio, _configuracionServicio, _logger)
             {
                 TituloModulo = ((Button)sender).Tag.ToString(),
                 // ColorTituloModulo = ColorAleatorio.Obtener(((Button)sender).Tag.ToString()[..1])
@@ -334,7 +334,7 @@ namespace SidkenuWF
 
         private void BtnSalirSistema_Click(object? sender, EventArgs e)
         {
-            if (MessageBox.Show("¿ Esta seguro que desea Salir del Sistema ?", "Atención", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+            if (MessageBox.Show("Â¿Esta seguro que desea Salir del Sistema?", "AtenciÃ³n", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
                 == DialogResult.Yes)
             {
                 this.CerrarSession = false;
@@ -351,7 +351,7 @@ namespace SidkenuWF
 
         private void BtnCerrarSesion_Click(object? sender, EventArgs e)
         {
-            if (MessageBox.Show("¿ Esta seguro de Cerrar Sesión para cambiar de usuario ?", "Atención", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+            if (MessageBox.Show("Â¿Esta seguro de Cerrar SesiÃ³n para cambiar de usuario?", "AtenciÃ³n", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
                 == DialogResult.Yes)
             {
                 this.CerrarSession = true;

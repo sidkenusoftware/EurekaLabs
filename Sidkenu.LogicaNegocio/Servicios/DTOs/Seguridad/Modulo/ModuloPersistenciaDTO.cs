@@ -20,6 +20,6 @@ namespace Sidkenu.LogicaNegocio.Servicios.DTOs.Seguridad.Modulo
 
         public bool Caja { get; set; }
 
-        public bool DashBoard { get; set; }
+        public bool Dashboard { get; set; }
     }
 }

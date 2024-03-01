@@ -1,6 +1,6 @@
 ﻿namespace SidkenuWF.Formularios.Core
 {
-    partial class _00114_ModuloDashBoard
+    partial class _00114_ModuloDashboard
     {
         /// <summary>
         /// Required designer variable.
@@ -170,15 +170,15 @@
             ctrolDashCaja.Size = new Size(265, 91);
             ctrolDashCaja.TabIndex = 2;
             // 
-            // _00114_ModuloDashBoard
+            // _00114_ModuloDashboard
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(784, 561);
             Controls.Add(flpContenedor);
             Controls.Add(menuStrip1);
-            Name = "_00114_ModuloDashBoard";
-            Text = "DashBoard";
+            Name = "_00114_ModuloDashboard";
+            Text = "Dashboard";
             Controls.SetChildIndex(pnlTitulo, 0);
             Controls.SetChildIndex(menuStrip1, 0);
             Controls.SetChildIndex(pnlMenuLateral, 0);

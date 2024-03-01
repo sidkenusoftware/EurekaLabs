@@ -36,7 +36,7 @@
             CtrolModuloFabricacion = new Seguridad.Controles.SidkenuModulo();
             CtrolModuloPuntoVenta = new Seguridad.Controles.SidkenuModulo();
             CtrolModuloCaja = new Seguridad.Controles.SidkenuModulo();
-            CtrolModuloDashBoard = new Seguridad.Controles.SidkenuModulo();
+            CtrolModuloDashboard = new Seguridad.Controles.SidkenuModulo();
             flpContenedor.SuspendLayout();
             SuspendLayout();
             // 
@@ -50,7 +50,7 @@
             flpContenedor.Controls.Add(CtrolModuloFabricacion);
             flpContenedor.Controls.Add(CtrolModuloPuntoVenta);
             flpContenedor.Controls.Add(CtrolModuloCaja);
-            flpContenedor.Controls.Add(CtrolModuloDashBoard);
+            flpContenedor.Controls.Add(CtrolModuloDashboard);
             flpContenedor.Dock = DockStyle.Fill;
             flpContenedor.Location = new Point(0, 0);
             flpContenedor.Name = "flpContenedor";
@@ -120,14 +120,14 @@
             CtrolModuloCaja.Size = new Size(288, 132);
             CtrolModuloCaja.TabIndex = 6;
             // 
-            // CtrolModuloDashBoard
+            // CtrolModuloDashboard
             // 
-            CtrolModuloDashBoard.BackColor = Color.White;
-            CtrolModuloDashBoard.BorderStyle = BorderStyle.FixedSingle;
-            CtrolModuloDashBoard.Location = new Point(297, 417);
-            CtrolModuloDashBoard.Name = "CtrolModuloDashBoard";
-            CtrolModuloDashBoard.Size = new Size(288, 132);
-            CtrolModuloDashBoard.TabIndex = 7;
+            CtrolModuloDashboard.BackColor = Color.White;
+            CtrolModuloDashboard.BorderStyle = BorderStyle.FixedSingle;
+            CtrolModuloDashboard.Location = new Point(297, 417);
+            CtrolModuloDashboard.Name = "CtrolModuloDashboard";
+            CtrolModuloDashboard.Size = new Size(288, 132);
+            CtrolModuloDashboard.TabIndex = 7;
             // 
             // SidkenuContenedorModulos
             // 
@@ -151,6 +151,6 @@
         public Seguridad.Controles.SidkenuModulo CtrolModuloFabricacion;
         public Seguridad.Controles.SidkenuModulo CtrolModuloPuntoVenta;
         public Seguridad.Controles.SidkenuModulo CtrolModuloCaja;
-        public Seguridad.Controles.SidkenuModulo CtrolModuloDashBoard;
+        public Seguridad.Controles.SidkenuModulo CtrolModuloDashboard;
     }
 }

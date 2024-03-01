@@ -5,9 +5,9 @@ using SidkenuWF.Formularios.Base;
 
 namespace SidkenuWF.Formularios.Core
 {
-    public partial class _00114_ModuloDashBoard : FormularioMenuLateral
+    public partial class _00114_ModuloDashboard : FormularioMenuLateral
     {
-        public _00114_ModuloDashBoard(ISeguridadServicio seguridadServicio,
+        public _00114_ModuloDashboard(ISeguridadServicio seguridadServicio,
                                       IConfiguracionServicio configuracionServicio,
                                       ILogger logger)
                                       : base(seguridadServicio, configuracionServicio, logger)
