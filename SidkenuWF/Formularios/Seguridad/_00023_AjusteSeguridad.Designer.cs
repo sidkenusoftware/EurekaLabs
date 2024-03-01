@@ -55,6 +55,8 @@
             txtCredencialUsuario = new TextBox();
             label1 = new Label();
             groupBox2 = new GroupBox();
+            chkModuloDashboard = new CheckBox();
+            chkModuloCaja = new CheckBox();
             chkModuloPuntoVenta = new CheckBox();
             chkModuloFabricacion = new CheckBox();
             chkModuloInventario = new CheckBox();
@@ -68,8 +70,6 @@
             imgLoginNormal = new PictureBox();
             panel1 = new Panel();
             panel2 = new Panel();
-            chkModuloDashBoard = new CheckBox();
-            chkModuloCaja = new CheckBox();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             groupBox4.SuspendLayout();
@@ -79,6 +79,10 @@
             ((System.ComponentModel.ISupportInitialize)imgLoginAvatar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)imgLoginNormal).BeginInit();
             SuspendLayout();
+            // 
+            // lblTitulo
+            // 
+            lblTitulo.Size = new Size(668, 41);
             // 
             // tabControl1
             // 
@@ -118,7 +122,7 @@
             groupBox4.Size = new Size(293, 204);
             groupBox4.TabIndex = 4;
             groupBox4.TabStop = false;
-            groupBox4.Text = "[ Loggin ]";
+            groupBox4.Text = "[ Logging ]";
             // 
             // label8
             // 
@@ -383,7 +387,7 @@
             // 
             // groupBox2
             // 
-            groupBox2.Controls.Add(chkModuloDashBoard);
+            groupBox2.Controls.Add(chkModuloDashboard);
             groupBox2.Controls.Add(chkModuloCaja);
             groupBox2.Controls.Add(chkModuloPuntoVenta);
             groupBox2.Controls.Add(chkModuloFabricacion);
@@ -397,6 +401,26 @@
             groupBox2.TabIndex = 2;
             groupBox2.TabStop = false;
             groupBox2.Text = "[ Módulos ]";
+            // 
+            // chkModuloDashboard
+            // 
+            chkModuloDashboard.AutoSize = true;
+            chkModuloDashboard.Location = new Point(161, 51);
+            chkModuloDashboard.Name = "chkModuloDashboard";
+            chkModuloDashboard.Size = new Size(83, 19);
+            chkModuloDashboard.TabIndex = 7;
+            chkModuloDashboard.Text = "Dashboard";
+            chkModuloDashboard.UseVisualStyleBackColor = true;
+            // 
+            // chkModuloCaja
+            // 
+            chkModuloCaja.AutoSize = true;
+            chkModuloCaja.Location = new Point(161, 26);
+            chkModuloCaja.Name = "chkModuloCaja";
+            chkModuloCaja.Size = new Size(49, 19);
+            chkModuloCaja.TabIndex = 6;
+            chkModuloCaja.Text = "Caja";
+            chkModuloCaja.UseVisualStyleBackColor = true;
             // 
             // chkModuloPuntoVenta
             // 
@@ -535,26 +559,6 @@
             panel2.Size = new Size(109, 69);
             panel2.TabIndex = 5;
             // 
-            // chkModuloDashBoard
-            // 
-            chkModuloDashBoard.AutoSize = true;
-            chkModuloDashBoard.Location = new Point(161, 51);
-            chkModuloDashBoard.Name = "chkModuloDashBoard";
-            chkModuloDashBoard.Size = new Size(83, 19);
-            chkModuloDashBoard.TabIndex = 7;
-            chkModuloDashBoard.Text = "DashBoard";
-            chkModuloDashBoard.UseVisualStyleBackColor = true;
-            // 
-            // chkModuloCaja
-            // 
-            chkModuloCaja.AutoSize = true;
-            chkModuloCaja.Location = new Point(161, 26);
-            chkModuloCaja.Name = "chkModuloCaja";
-            chkModuloCaja.Size = new Size(49, 19);
-            chkModuloCaja.TabIndex = 6;
-            chkModuloCaja.Text = "Caja";
-            chkModuloCaja.UseVisualStyleBackColor = true;
-            // 
             // _00023_AjusteSeguridad
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -622,7 +626,7 @@
         private FontAwesome.Sharp.IconButton btnVerCredencialPass;
         private FontAwesome.Sharp.IconButton btnVerCredencialUsuario;
         private Label label9;
-        private CheckBox chkModuloDashBoard;
+        private CheckBox chkModuloDashboard;
         private CheckBox chkModuloCaja;
     }
 }

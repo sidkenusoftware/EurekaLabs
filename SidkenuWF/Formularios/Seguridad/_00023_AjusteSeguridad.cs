@@ -109,7 +109,7 @@ namespace SidkenuWF.Formularios.Seguridad
                     chkModuloSeguridad.Checked = _moduloDTO == null ? true : _moduloDTO.Seguridad;
                     chkModuloVenta.Checked = _moduloDTO == null ? false : _moduloDTO.Venta;
                     chkModuloCaja.Checked = _moduloDTO == null ? false : _moduloDTO.Caja;
-                    chkModuloDashBoard.Checked = _moduloDTO == null ? false : _moduloDTO.DashBoard;
+                    chkModuloDashboard.Checked = _moduloDTO == null ? false : _moduloDTO.DashBoard;
                 }
             }
         }
@@ -171,7 +171,7 @@ namespace SidkenuWF.Formularios.Seguridad
                 Inventario = chkModuloInventario.Checked,
                 Seguridad = chkModuloSeguridad.Checked,
                 Caja = chkModuloCaja.Checked,
-                DashBoard = chkModuloDashBoard.Checked,
+                DashBoard = chkModuloDashboard.Checked,
                 EstaEliminado = false,
             };
         }
