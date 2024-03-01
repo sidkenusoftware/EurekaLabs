@@ -27,6 +27,8 @@ namespace SidkenuWF.Formularios.Seguridad
             _configuracionServicio = configuracionServicio;
             _moduloServicio = moduloServicio;
 
+            lblTitulo.Text = "Ajuste / Configuración";
+
             txtCredencialPassword.KeyPress += Validacion.NoInyeccion;
 
             txtCredencialUsuario.KeyPress += Validacion.NoInyeccion;

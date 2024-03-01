@@ -165,7 +165,7 @@
         private Panel pnlTitulo;
         private Panel pnlLinea;
         private FontAwesome.Sharp.IconPictureBox imgLogo;
-        private Label lblTitulo;
         private FontAwesome.Sharp.IconButton btnSalir;
+        protected Label lblTitulo;
     }
 }
