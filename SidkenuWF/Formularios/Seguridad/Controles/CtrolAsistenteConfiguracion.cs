@@ -18,7 +18,7 @@ namespace SidkenuWF.Formularios.Base.Controles
         {
             return new ConfiguracionAsistenteDTO
             {
-                LoginNormal = rdbLoginAvatar.Checked ? false : true,
+                LoginNormal = !rdbLoginAvatar.Checked,
             };
         }
     }
