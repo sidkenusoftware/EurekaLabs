@@ -3,7 +3,7 @@ using Sidkenu.AccesoDatos.Entidades.Core;
 using Sidkenu.AccesoDatos.Entidades.Seguridad;
 using Sidkenu.AccesoDatos.Constantes;
 
-namespace Sidkenu.Infraestructura
+namespace Sidkenu.AccesoDatos.Infraestructura
 {
     public static class SemillaCargaInicial
     {
@@ -228,12 +228,12 @@ namespace Sidkenu.Infraestructura
                 Bonificacion = 0,
                 Direccion = "Libertad",
                 Documento = ClientePorDefecto.NumeroDocumentoConsumidorFinal,
-                FechaNacimiento = new DateTime(1900, 1, 1,0,0,0),
+                FechaNacimiento = new DateTime(1900, 1, 1, 0, 0, 0),
                 Mail = "consumidorfinal@gmail.com",
                 MontoMaximoCompra = 0,
                 TipoDocumentoId = tipoDocumentoDni.Id,
                 TipoResponsabilidadId = tipoResponsabilidadConsumidorFinal.Id,
-                Telefono = "9999999",                
+                Telefono = "9999999",
                 User = "semilla@tsidkenu.com",
                 EstaEliminado = false,
             };
@@ -445,7 +445,7 @@ namespace Sidkenu.Infraestructura
                 Codigo = VarianteDefecto.VarianteCodigo,
                 Descripcion = "Variante Defecto",
                 EstaEliminado = false,
-                User = "semilla@tsidkenu.com",                
+                User = "semilla@tsidkenu.com",
             };
 
             modelBuilder.Entity<Variante>().HasData(varianteDefault);

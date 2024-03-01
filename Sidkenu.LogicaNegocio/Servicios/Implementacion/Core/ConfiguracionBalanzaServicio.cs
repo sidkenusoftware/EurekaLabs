@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 using Sidkenu.AccesoDatos.Entidades.Core;
-using Sidkenu.Infraestructura;
+using Sidkenu.AccesoDatos.Infraestructura;
 using Sidkenu.LogicaNegocio.Servicios.DTOs.Base;
 using Sidkenu.LogicaNegocio.Servicios.DTOs.Core.ConfiguracionBalanza;
 using Sidkenu.LogicaNegocio.Servicios.Implementacion.Base;

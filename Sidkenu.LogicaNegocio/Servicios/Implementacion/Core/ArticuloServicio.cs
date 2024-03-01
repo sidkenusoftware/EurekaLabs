@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Sidkenu.AccesoDatos.Constantes;
 using Sidkenu.AccesoDatos.Constantes.Enum;
 using Sidkenu.AccesoDatos.Entidades.Core;
-using Sidkenu.Infraestructura;
+using Sidkenu.AccesoDatos.Infraestructura;
 using Sidkenu.LogicaNegocio.Servicios.DTOs.Base;
 using Sidkenu.LogicaNegocio.Servicios.DTOs.Core.Articulo;
 using Sidkenu.LogicaNegocio.Servicios.DTOs.Core.ArticuloPrecio;
@@ -11,7 +11,6 @@ using Sidkenu.LogicaNegocio.Servicios.Implementacion.Base;
 using Sidkenu.LogicaNegocio.Servicios.Interface.Core;
 using Sidkenu.LogicaNegocio.Servicios.Interface.Seguridad;
 using System.Linq.Expressions;
-using System.Transactions;
 
 namespace Sidkenu.LogicaNegocio.Servicios.Implementacion.Core
 {

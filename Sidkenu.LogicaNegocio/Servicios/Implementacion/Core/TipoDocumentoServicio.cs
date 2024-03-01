@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using Sidkenu.Infraestructura;
+using Sidkenu.AccesoDatos.Infraestructura;
 using Sidkenu.LogicaNegocio.Servicios.DTOs.Base;
 using Sidkenu.LogicaNegocio.Servicios.DTOs.Core.TipoDocumento;
 using Sidkenu.LogicaNegocio.Servicios.Implementacion.Base;

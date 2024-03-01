@@ -1,5 +1,6 @@
 ﻿using Sidkenu.AccesoDatos.Constantes.Enum;
 using Sidkenu.AccesoDatos.Entidades.Core;
+using Sidkenu.AccesoDatos.Infraestructura;
 using Sidkenu.Infraestructura;
 using Sidkenu.LogicaNegocio.Servicios.Interface.Core;
 

@@ -2,13 +2,12 @@
 using Microsoft.EntityFrameworkCore;
 using Sidkenu.AccesoDatos.Constantes.Enum;
 using Sidkenu.AccesoDatos.Entidades.Core;
-using Sidkenu.Infraestructura;
+using Sidkenu.AccesoDatos.Infraestructura;
 using Sidkenu.LogicaNegocio.Servicios.DTOs.Base;
 using Sidkenu.LogicaNegocio.Servicios.DTOs.Core.ArticuloVariante;
 using Sidkenu.LogicaNegocio.Servicios.Implementacion.Base;
 using Sidkenu.LogicaNegocio.Servicios.Interface.Core;
 using Sidkenu.LogicaNegocio.Servicios.Interface.Seguridad;
-using System.Transactions;
 
 namespace Sidkenu.LogicaNegocio.Servicios.Implementacion.Core
 {

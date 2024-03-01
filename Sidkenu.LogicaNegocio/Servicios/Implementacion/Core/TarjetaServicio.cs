@@ -1,14 +1,13 @@
 ﻿using AutoMapper;
 using Sidkenu.AccesoDatos.Constantes;
 using Sidkenu.AccesoDatos.Entidades.Core;
-using Sidkenu.Infraestructura;
+using Sidkenu.AccesoDatos.Infraestructura;
 using Sidkenu.LogicaNegocio.Servicios.DTOs.Base;
 using Sidkenu.LogicaNegocio.Servicios.DTOs.Core.Tarjeta;
 using Sidkenu.LogicaNegocio.Servicios.Implementacion.Base;
 using Sidkenu.LogicaNegocio.Servicios.Interface.Core;
 using Sidkenu.LogicaNegocio.Servicios.Interface.Seguridad;
 using System.Data.Entity;
-using System.Linq;
 using System.Linq.Expressions;
 
 namespace Sidkenu.LogicaNegocio.Servicios.Implementacion.Core

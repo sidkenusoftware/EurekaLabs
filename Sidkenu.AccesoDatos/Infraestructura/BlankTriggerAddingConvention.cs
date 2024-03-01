@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Conventions;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore;
 
-namespace Sidkenu.Infraestructura
+namespace Sidkenu.AccesoDatos.Infraestructura
 {
     public class BlankTriggerAddingConvention : IModelFinalizingConvention
     {

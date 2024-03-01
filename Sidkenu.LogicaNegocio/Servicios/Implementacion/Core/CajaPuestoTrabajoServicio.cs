@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Sidkenu.AccesoDatos.Entidades.Core;
 using Sidkenu.AccesoDatos.Entidades.Seguridad;
-using Sidkenu.Infraestructura;
+using Sidkenu.AccesoDatos.Infraestructura;
 using Sidkenu.LogicaNegocio.Servicios.DTOs.Base;
 using Sidkenu.LogicaNegocio.Servicios.DTOs.Core.Caja;
 using Sidkenu.LogicaNegocio.Servicios.DTOs.Core.CajaPuestoTrabajo;

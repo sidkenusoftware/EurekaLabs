@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Sidkenu.Infraestructura;
+using Sidkenu.AccesoDatos.Infraestructura;
 using Sidkenu.LogicaNegocio.Servicios.Interface.Seguridad;
 
 namespace Sidkenu.LogicaNegocio.Servicios.Implementacion.Seguridad

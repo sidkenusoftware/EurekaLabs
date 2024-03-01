@@ -1,15 +1,12 @@
 ﻿using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 using Sidkenu.AccesoDatos.Entidades.Seguridad;
-using Sidkenu.Infraestructura;
+using Sidkenu.AccesoDatos.Infraestructura;
 using Sidkenu.LogicaNegocio.Servicios.DTOs.Base;
 using Sidkenu.LogicaNegocio.Servicios.DTOs.Seguridad.EmpresaPersona;
 using Sidkenu.LogicaNegocio.Servicios.DTOs.Seguridad.Persona;
 using Sidkenu.LogicaNegocio.Servicios.Implementacion.Base;
 using Sidkenu.LogicaNegocio.Servicios.Interface.Seguridad;
-using StructureMap;
-using System.Linq;
-using System.Transactions;
 
 namespace Sidkenu.LogicaNegocio.Servicios.Implementacion.Seguridad
 {

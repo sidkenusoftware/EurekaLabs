@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Microsoft.EntityFrameworkCore;
+using Sidkenu.AccesoDatos.Infraestructura;
 using Sidkenu.Infraestructura;
 using Sidkenu.LogicaNegocio.Servicios.DTOs.Seguridad.Cuenta;
 using Sidkenu.LogicaNegocio.Servicios.DTOs.Seguridad.Usuario;

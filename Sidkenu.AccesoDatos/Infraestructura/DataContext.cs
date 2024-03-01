@@ -7,9 +7,10 @@ using Sidkenu.AccesoDatos.Entidades.Core;
 using Sidkenu.AccesoDatos.Entidades.Seguridad;
 using Sidkenu.AccesoDatos.Entidades.Setting.Core;
 using Sidkenu.AccesoDatos.Entidades.Setting.Seguridad;
+using Sidkenu.Infraestructura;
 using System.Data.Entity.ModelConfiguration.Configuration;
 
-namespace Sidkenu.Infraestructura
+namespace Sidkenu.AccesoDatos.Infraestructura
 {
     public class DataContext : DbContext
     {
@@ -48,7 +49,7 @@ namespace Sidkenu.Infraestructura
                         op.CommandTimeout(60);
                         op.EnableRetryOnFailure();
                     });
-                
+
                 optionsBuilder.UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
 
             }
@@ -279,13 +280,13 @@ namespace Sidkenu.Infraestructura
 
                     #region Core con Auditoria
 
-                  modelBuilder.Entity<CajaPuestoTrabajo>()
-                  .ToTable("CajasPuestosTrabajos", op =>
-                  {
-                      op.IsTemporal();
-                  })
-                  .HasIndex(x => new { x.CajaId, x.PuestoTrabajoId })
-                  .IsUnique();
+                    modelBuilder.Entity<CajaPuestoTrabajo>()
+                    .ToTable("CajasPuestosTrabajos", op =>
+                    {
+                        op.IsTemporal();
+                    })
+                    .HasIndex(x => new { x.CajaId, x.PuestoTrabajoId })
+                    .IsUnique();
 
                     modelBuilder.Entity<PuestoTrabajo>()
                    .ToTable("PuestosTrabajos", op =>

@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Sidkenu.AccesoDatos.Constantes;
 using Sidkenu.AccesoDatos.Entidades.Core;
+using Sidkenu.AccesoDatos.Infraestructura;
 using Sidkenu.Infraestructura;
 using Sidkenu.LogicaNegocio.Servicios.DTOs.Base;
 using Sidkenu.LogicaNegocio.Servicios.DTOs.Core.Familia;
