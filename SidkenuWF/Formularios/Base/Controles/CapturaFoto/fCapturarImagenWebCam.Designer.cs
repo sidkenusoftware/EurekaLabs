@@ -93,9 +93,9 @@
             lblDispositivo.ForeColor = Color.WhiteSmoke;
             lblDispositivo.Location = new Point(10, 3);
             lblDispositivo.Name = "lblDispositivo";
-            lblDispositivo.Size = new Size(99, 17);
+            lblDispositivo.Size = new Size(74, 17);
             lblDispositivo.TabIndex = 10;
-            lblDispositivo.Text = "Ingesos Brutos";
+            lblDispositivo.Text = "Dispositivo";
             // 
             // cmbDispositivo
             // 
