@@ -9,14 +9,15 @@ namespace Sidkenu.AccesoDatos.CadenaConexion
         protected override string Usuario => ObtenerUsuario(Ambiente.Obtener);
         protected override string Password => "P$assword";
 
-        public override string Obtener => $"Data Source={Servidor}; " +
-            $"Initial Catalog={BaseDatos}; " +
-            $"User Id={Usuario}; " +
-            $"Password={Password}; " +
-            $"MultipleActiveResultSets=False; " +
-            $"Encrypt=False; " +
-            $"TrustServerCertificate=False;";
+        //public override string Obtener => $"Data Source={Servidor}; " +
+        //    $"Initial Catalog={BaseDatos}; " +
+        //    $"User Id={Usuario}; " +
+        //    $"Password={Password}; " +
+        //    $"MultipleActiveResultSets=False; " +
+        //    $"Encrypt=False; " +
+        //    $"TrustServerCertificate=False;";
 
+        public override string Obtener => "Server=(localdb)\\mssqllocaldb;Database=Commerce;Trusted_Connection=True;MultipleActiveResultSets=true";
 
         private string ObtenerServidor(TipoAmbiente ambiente)
         {
